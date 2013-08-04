@@ -1,0 +1,20 @@
+.alt-x-grid-row .x-grid-row .x-grid-cell { 
+    vertical-align: middle;
+} 
+
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+
+A:link {text-decoration: underline; color: red;}
+A:visited {text-decoration: none; color: red;}
+A:active {text-decoration: none; color: red;}
+A:hover {text-decoration: underline; color: red;}
+
+.alt-x-grid-row A:link {text-decoration: none; color: black;}
+.alt-x-grid-row A:visited {text-decoration: none; color: black;}
+.alt-x-grid-row A:active {text-decoration: none; color: black;}
+.alt-x-grid-row A:hover {text-decoration: underline; color: black;}
+
+
+
