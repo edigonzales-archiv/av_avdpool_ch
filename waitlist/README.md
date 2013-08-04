@@ -1,3 +1,6 @@
+# Allgemein
+Die Warteliste zeigt die zu importierenden ITF-Dateien auf einer Website an.
+
 # Kettle
 Der Job *update_waitlist.kjb* liest alle ITF-Dateien eines Verzeichnisses und schreibt diese in eine SQLite-Datenbank. Anschliessend wird aus der Datenbank eine JSON-Datei erstellt, die für das Anzeigen der (Import-)Warteliste auf der Website benötigt wird.
 
@@ -43,7 +46,7 @@ CREATE VIEW kantone_v AS
 ```
 
 
-** waitlist_v**
+**waitlist_v**
 View für Warteliste mit den Gemeindenamen.
 ```
 CREATE VIEW waitlist_v AS 
@@ -54,6 +57,7 @@ CREATE VIEW waitlist_v AS
 ```
 
 # Cronjob
+*kitchen.sh* dient zur Ausführung von Kettle-Jobs/-Transformationen.
 ```
 5 * * * * kitchen.sh -file=/path/to/update_waitlist.kjb -level=Basic -log=update_waitlist.log
 ```
