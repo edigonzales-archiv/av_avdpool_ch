@@ -141,8 +141,8 @@
       <create_destination_folder>N</create_destination_folder>
       <fields>
         <field>
-          <source_filefolder>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;waitlist&#47;db&#47;waitlist.json</source_filefolder>
-          <destination_filefolder>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;waitlist&#47;db&#47;waitlist_copy.json</destination_filefolder>
+          <source_filefolder>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;waitlist&#47;waitlist.json</source_filefolder>
+          <destination_filefolder>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;waitlist&#47;waitlist_copy.json</destination_filefolder>
           <wildcard/>
         </field>
       </fields>

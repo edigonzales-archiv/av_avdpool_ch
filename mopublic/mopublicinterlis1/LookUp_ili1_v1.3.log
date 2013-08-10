@@ -1,0 +1,116 @@
+reading script c:\program files (x86)\iltools\user\script\igcheck\interlis1.cfg ...
+
+******************************
+*                            *
+* iG/Check for INTERLIS 1    *
+*                            *
+* Version 2012.0 25.11.2011  *
+*                            *
+* (c) infoGrips 1997-2012    *
+*                            *
+******************************
+
+******************************
+* License Information:       *
+* swisstopo Landestopografie *
+* 3084 Wabern                *
+* ICS Kernel Version 2012.0  *
+******************************
+
+License file: c:\program files (x86)\iltools\user\license\iltoolspro.lic
+
+input file  : n:\2-vd\2-amtlichevermessung\23-entwicklung-av\2303-fachthemen\2303-17-mopublic\lookup_ili1_v1.3.itf
+input model : c:\program files (x86)\iltools\user\models\lookup_tables_ili1_v1.3.ili
+date        : 22.2.2013
+time        : 9:28:52
+
+==============================================================================
+Topic: Lookup_tables, Table: Mark_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Reliability_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: QualityStandard_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Validity_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Text_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Boolean_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Control_point_Category
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: LCS_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: SO_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: RealEstate_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Completeness_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Fluid_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Bound_validity_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Terrain_edge_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Cut_out_surface_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Local_names_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Territorial_bound_Line_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Other_territorial_bound_type
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Topic_name
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Classe_name
+==============================================================================
+==============================================================================
+Topic: Lookup_tables, Table: Attribute_name
+==============================================================================
+
+Table Statistics
+================
+
+    9 objects in table Lookup_tables,Mark_type
+    2 objects in table Lookup_tables,Reliability_type
+    5 objects in table Lookup_tables,QualityStandard_type
+    2 objects in table Lookup_tables,Validity_type
+    2 objects in table Lookup_tables,Text_type
+    2 objects in table Lookup_tables,Boolean_type
+    6 objects in table Lookup_tables,Control_point_Category
+   26 objects in table Lookup_tables,LCS_type
+   42 objects in table Lookup_tables,SO_type
+    5 objects in table Lookup_tables,RealEstate_type
+    2 objects in table Lookup_tables,Completeness_type
+    3 objects in table Lookup_tables,Fluid_type
+    4 objects in table Lookup_tables,Bound_validity_type
+    3 objects in table Lookup_tables,Terrain_edge_type
+    2 objects in table Lookup_tables,Cut_out_surface_type
+    3 objects in table Lookup_tables,Local_names_type
+    4 objects in table Lookup_tables,Territorial_bound_Line_type
+    3 objects in table Lookup_tables,Other_territorial_bound_type
+   10 objects in table Lookup_tables,Topic_name
+   41 objects in table Lookup_tables,Classe_name
+  261 objects in table Lookup_tables,Attribute_name
+
+completed with no errors
