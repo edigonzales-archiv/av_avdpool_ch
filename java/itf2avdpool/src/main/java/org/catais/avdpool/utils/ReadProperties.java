@@ -103,13 +103,21 @@ public class ReadProperties {
 			throw new IllegalArgumentException("'sqlite' parameter not set.");
 		}
     	
-//    	// reference frame
-//    	String frame = properties.getProperty("frame");
-//    	if (frame != null) {
-//    		params.put("frame", frame.trim());
-//    	} else {
-//			throw new IllegalArgumentException("'frame' parameter not set.");
-//		}
+    	// destination directory
+    	String dstdir = properties.getProperty("dstdir");
+    	if (dstdir != null) {
+    		params.put("dstdir", dstdir.trim());
+    	} else {
+			throw new IllegalArgumentException("'dstdir' parameter not set.");
+		}
+    	
+        // temporary destination directory
+        String tmpdstdir = properties.getProperty("tmpdstdir");
+        if (dstdir != null) {
+            params.put("tmpdstdir", tmpdstdir.trim());
+        } else {
+            throw new IllegalArgumentException("'tmpdstdir' parameter not set.");
+        }    	
     	
     	return params;
     }

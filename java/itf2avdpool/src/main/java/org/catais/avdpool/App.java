@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.*;
+import static java.nio.file.StandardCopyOption.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +15,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.catais.avdpool.utils.IOUtils;
-import org.catais.avdpool.utils.ImportFiles;
+import org.catais.avdpool.utils.PrepareFiles;
 import org.catais.avdpool.utils.ReadProperties;
 import org.catais.avdpool.utils.Reindex;
 import org.catais.avdpool.utils.Vacuum;
@@ -57,15 +59,15 @@ public class App
 			HashMap whiteList = white.getList();
 			logger.debug(whiteList);
 			
-			ImportFiles importfiles = new ImportFiles( params, whiteList );
-			ArrayList<HashMap> fileList = importfiles.getList();
+			PrepareFiles prepFiles = new PrepareFiles( params, whiteList );
+			ArrayList<HashMap> fileList = prepFiles.moveFiles();
 			logger.debug(fileList);
 			
 			for ( HashMap map : fileList )
 			{
 			    logger.debug( map );
 			    
-                String filename = ( String ) map.get( "filename" );
+                String fileName = ( String ) map.get( "filename" );
 			    String prefix = ( String ) map.get( "bfsnr" ) + ( String ) map.get( "los" );
                 
 			    int bfsnr = Integer.valueOf( ( String ) map.get( "bfsnr" ) ).intValue();
@@ -73,11 +75,28 @@ public class App
                 
                 String epsg = "21781";
                 
-                IliReader iliReader = new IliReader( filename, epsg, params );
+                IliReader iliReader = new IliReader( fileName, epsg, params );
                 iliReader.setTidPrefix( prefix );
 
                 iliReader.delete( bfsnr, los );
                 iliReader.read( bfsnr, los );
+                
+                // Falls keine Fehler beim importieren passiert sind,
+                // wird die Datei in das definitive Verzeichnis verschoben.
+                // Abklären, wie genau Fehlerhandling ist!!!
+                // Es scheint, als würde das so noch nicht funktionieren.
+                // Die Forschleife sollte nach bestimmten Fehlern trotzdem
+                // weiter iterieren. Oder Rückgabewert, falls Fehler beim
+                // Import?
+                String shortFileName = ( String ) map.get( "short_filename" );
+                String dstPath = ( String ) params.get( "dstdir" );
+                
+                Path source = Paths.get( fileName );
+                Path target = Paths.get( dstPath + File.separatorChar + shortFileName );
+                                
+                Files.move(source, target, REPLACE_EXISTING);
+
+                
 
 			}
 			
