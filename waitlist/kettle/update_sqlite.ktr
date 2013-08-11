@@ -91,7 +91,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get Interlis file names</from><to>Get bfsnr and lot</to><enabled>Y</enabled> </hop>  <hop> <from>Get bfsnr and lot</from><to>String to Integer</to><enabled>Y</enabled> </hop>  <hop> <from>String to Integer</from><to>Write to SQLite</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get Interlis file names</from><to>Split Fields</to><enabled>Y</enabled> </hop>  <hop> <from>Split Fields</from><to>String to Integer</to><enabled>Y</enabled> </hop>  <hop> <from>String to Integer</from><to>Get lot number</to><enabled>Y</enabled> </hop>  <hop> <from>Get lot number</from><to>Write to SQLite</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Get Interlis file names</name>
     <type>GetFileNames</type>
@@ -136,7 +136,7 @@
     </step>
 
   <step>
-    <name>Get bfsnr and lot</name>
+    <name>Get lot number</name>
     <type>StringCut</type>
     <description/>
     <distribute>N</distribute>
@@ -147,21 +147,15 @@
            </partitioning>
     <fields>
       <field>
-        <in_stream_name>short_filename</in_stream_name>
-        <out_stream_name>bfsnr</out_stream_name>
-        <cut_from>3</cut_from>
-        <cut_to>7</cut_to>
-      </field>
-      <field>
-        <in_stream_name>short_filename</in_stream_name>
+        <in_stream_name>losnr</in_stream_name>
         <out_stream_name>los</out_stream_name>
-        <cut_from>9</cut_from>
-        <cut_to>11</cut_to>
+        <cut_from>1</cut_from>
+        <cut_to>3</cut_to>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>308</xloc>
+      <xloc>546</xloc>
       <yloc>119</yloc>
       <draw>Y</draw>
       </GUI>
@@ -183,18 +177,38 @@
         <jsScript_name>ScriptValue</jsScript_name>
         <jsScript_script>
 
-var losnr = los.Clone().str2num();
+&#47;&#47;var losnr = los.Clone().str2num();
+
+var parts = short_filename.Clone().getString().split(&quot;_&quot;);
+var bfsnr = parts[1];
+var losnr = parts[2];
+
+var foo = short_filename.Clone().getString();
+var bar = extension.Clone().getString();
+var short_file = foo + &quot;.&quot; + bar;
 </jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>losnr</name>
-        <rename>losnr</rename>
-        <type>Number</type>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>bfsnr</name>
+        <rename>bfsnr</rename>
+        <type>Integer</type>
         <length>9</length>
         <precision>0</precision>
         <replace>N</replace>
+      </field>      <field>        <name>losnr</name>
+        <rename>losnr</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>short_file</name>
+        <rename>short_file</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>481</xloc>
-      <yloc>118</yloc>
+      <xloc>409</xloc>
+      <yloc>120</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -229,7 +243,7 @@ var losnr = los.Clone().str2num();
     <fields>
         <field>
           <column_name>filename</column_name>
-          <stream_name>short_filename</stream_name>
+          <stream_name>short_file</stream_name>
         </field>
         <field>
           <column_name>path</column_name>
@@ -245,13 +259,45 @@ var losnr = los.Clone().str2num();
         </field>
         <field>
           <column_name>los</column_name>
-          <stream_name>losnr</stream_name>
+          <stream_name>los</stream_name>
         </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>632</xloc>
+      <xloc>906</xloc>
       <yloc>118</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split Fields</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>short_filename</splitfield>
+   <delimiter>.</delimiter>
+    <fields>      <field>        <name>short_filename</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>266</xloc>
+      <yloc>120</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
