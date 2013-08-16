@@ -64,8 +64,8 @@ public class SingleImportApp {
 			//int gem_bfs = 3901;
 			//String itf = "../../data/3901_20130523_dm01avch24d.itf";
 
-			String itf = "../../data/tmp/ch_254900.itf";
-			int gem_bfs = 2549;
+			String itf = "../../data/tmp/PLZO_ITF_LV03.itf";
+			int gem_bfs = 0000;
 			IliReader iliReader = new IliReader( itf, "21781", params );
 			iliReader.delete( gem_bfs, 0 );
 			iliReader.read( gem_bfs, 0 );

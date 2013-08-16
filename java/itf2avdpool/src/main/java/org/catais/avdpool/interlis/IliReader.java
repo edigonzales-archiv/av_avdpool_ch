@@ -166,7 +166,7 @@ public class IliReader {
     }
     
         
-    public void read( int gem_bfs, int los ) throws IoxException 
+    public void read( int gem_bfs, int los ) throws IoxException, IOException 
     {    	    	
     	logger.debug( "Starting Transaction..." );
     	t = new DefaultTransaction();
@@ -174,7 +174,6 @@ public class IliReader {
     	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
     	((ItfReader) ioxReader).setModel( iliTd );
     	((ItfReader) ioxReader).setRenumberTids( true );
-    	//((ItfReader) ioxReader).setRenumberTids( false );
     	((ItfReader) ioxReader).setReadEnumValAsItfCode( true );
 
     	IoxEvent event = ioxReader.read();
@@ -193,17 +192,7 @@ public class IliReader {
     			
     			//logger.debug("tag: " + tag);
     			readObject( iomObj, tag, gem_bfs, los );
-    			
-    			//if ( tag.equalsIgnoreCase(featureName) ) 
-    			//{
-    				//readObject(iomObj, tag, false, true);	
-    			//} 
-    			//else 
-    			//{
-    				//readObject(iomObj, featureName, true, true);				
-    			//}
     			featureName = tag;	
-
     		} 
     		else if (event instanceof EndBasketEvent) 
     		{
@@ -257,7 +246,7 @@ public class IliReader {
     }
     
     
-    private void readObject( IomObject iomObj, String featureName, int gem_bfs, int los ) 
+    private void readObject( IomObject iomObj, String featureName, int gem_bfs, int los ) throws IOException
     {
     	String tag=iomObj.getobjecttag();
     	//logger.debug(iomObj.getobjectline());
@@ -583,7 +572,7 @@ public class IliReader {
     }
     
        
-    private void writeToPostgis() 
+    private void writeToPostgis() throws IOException
     {
     	logger.debug("writeToPostgis (Geknorze.....)");
 		if ( isAreaHelper == true ) 
@@ -697,7 +686,7 @@ public class IliReader {
 	}
     
 
-    private void writeToPostgis( SimpleFeatureCollection collection, String featureName )
+    private void writeToPostgis( SimpleFeatureCollection collection, String featureName ) throws IOException
     {
     	try 
     	{
@@ -720,35 +709,25 @@ public class IliReader {
 
     		String tableName = ( featureName.substring( featureName.indexOf(".") + 1 ) ).replace( ".", "_" ).toLowerCase();
 
-    		try {
-    			FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource( tableName );
-    			FeatureStore<SimpleFeatureType, SimpleFeature> store = (FeatureStore<SimpleFeatureType, SimpleFeature>) source;
+    		FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource( tableName );
+    		FeatureStore<SimpleFeatureType, SimpleFeature> store = (FeatureStore<SimpleFeatureType, SimpleFeature>) source;
 
-    			store.setTransaction(t);
+    		store.setTransaction(t);
 
-    			try {    				
-    				logger.debug("Add features: " + featureName);
-    				store.addFeatures(collection);
+    		try {    				
+    		    logger.debug("Add features: " + featureName);
+    		    store.addFeatures(collection);
 
-    			} catch ( IOException ex ) {
-    				ex.printStackTrace();
-        			logger.error( ex.getMessage() );
-        			//datastore.dispose();
-    			}
-    		} 
-    		catch ( IOException ex ) {
-    			ex.printStackTrace();
-    			logger.error( "Table \"" + tableName + "\" not found." );
-    			logger.error( ex.getMessage() );
-    			//datastore.dispose();
+    		} catch ( IOException ex ) {
+    		    ex.printStackTrace();
+    		    logger.error( ex.getMessage() );
     		}
-
-    		//datastore.dispose();
-
-    	} catch ( IOException ex ) 
+    	} 
+    	catch ( IOException ex ) 
     	{
     		ex.printStackTrace();
 			logger.error( ex.getMessage() );
+            throw new IOException();
     	} 
     }
     

@@ -1,0 +1,5 @@
+0 = Operat geliefert
+1 = Import abgelehnt
+2 = Import läuft
+3 = Import fehlgeschlagen
+4 = Import erfolgreich
