@@ -1,0 +1,4 @@
+
+CREATE SCHEMA av_avwms AUTHORIZATION stefan;
+GRANT ALL ON SCHEMA avwms TO stefan;
+GRANT USAGE ON SCHEMA avwms TO mspublic;
