@@ -760,7 +760,7 @@ public class IliReader {
     private void compileModel() throws Ili2cException
     {
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{ "http://www.sogeo.ch/models/", "http://models.geo.admin.ch/" };
+    	String repositories[] = new String[]{ "http://www.catais.ch/models/", "http://models.geo.admin.ch/" };
     	manager.setRepositories( repositories );
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(this.modelName);
