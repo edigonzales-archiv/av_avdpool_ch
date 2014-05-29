@@ -5,60 +5,31 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.LinkedHashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
-import java.util.Collection;
-import java.util.HashSet;
-import java.math.BigDecimal;
 
-import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
 import org.geotools.feature.simple.SimpleFeatureBuilder;
-import org.geotools.feature.FeatureCollection;
-import org.geotools.feature.FeatureCollections;
-//import org.geotools.filter.text.cql2.*;
 import org.geotools.data.DataStore;
-import org.geotools.data.DataStoreFinder;
 import org.geotools.data.postgis.PostgisNGDataStoreFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
-//import org.geotools.data.postgis.PostgisDataStoreFactory;
 import org.geotools.data.DataUtilities;
 import org.geotools.data.DefaultTransaction;
 import org.geotools.data.FeatureSource;
 import org.geotools.data.FeatureStore;
 import org.geotools.data.Transaction;
-import org.geotools.geometry.jts.JTSFactoryFinder;
-import org.geotools.referencing.crs.DefaultGeographicCRS;
 import org.geotools.factory.CommonFactoryFinder;
-import org.geotools.data.DataAccessFactory.Param;
 
-import org.opengis.feature.simple.SimpleFeature;
-import org.opengis.feature.simple.SimpleFeatureType;
-import org.opengis.feature.type.AttributeType;
-import org.opengis.feature.type.AttributeDescriptor;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.feature.simple.SimpleFeatureType;
 import org.opengis.filter.Filter;
-import org.opengis.filter.identity.FeatureId;
 import org.opengis.filter.FilterFactory;
-import org.opengis.filter.FilterFactory2;
-import org.opengis.filter.PropertyIsEqualTo;
-import org.opengis.filter.expression.PropertyName;
-import org.opengis.filter.expression.Literal;
 
 import com.vividsolutions.jts.geom.*;
-import com.vividsolutions.jts.operation.polygonize.*;
-import com.vividsolutions.jts.index.strtree.STRtree;
-import com.vividsolutions.jts.index.SpatialIndex;
-import com.vividsolutions.jts.geom.prep.PreparedPoint;
-import com.vividsolutions.jts.geom.util.LinearComponentExtracter;
 
 import ch.interlis.ili2c.Ili2c;
 import ch.interlis.ili2c.Ili2cException;
@@ -71,7 +42,6 @@ import ch.interlis.iom_j.itf.ItfReader;
 import ch.interlis.iom_j.itf.EnumCodeMapper;
 import ch.interlis.iox_j.jts.Iox2jts;
 import ch.interlis.iox_j.jts.Iox2jtsException;
-import ch.interlis.iox_j.jts.Jts2iox;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -87,7 +57,6 @@ public class IliReader {
 	private static Logger logger = Logger.getLogger(IliReader.class);
 	
 	private ch.interlis.ili2c.metamodel.TransferDescription iliTd = null;
-	private int formatMode = 0;
 	private HashMap tag2class = null; 
 	private IoxReader ioxReader = null;
 	private EnumCodeMapper enumCodeMapper = new EnumCodeMapper();
@@ -96,12 +65,10 @@ public class IliReader {
 
     private Boolean isAreaHelper = false;
     private Boolean isAreaMain = false;
-    private String areaMainFeatureName = null;
     private Boolean isSurfaceHelper = false;
     private String surfaceMainFeatureName = null;
     private Boolean isSurfaceMain = false;
     private String geomName = null;
-    private int tableNumber = 0;
     private String prefix = null;
 	
 	private HashMap params = null;
@@ -114,19 +81,14 @@ public class IliReader {
     private String dbpwd = null;
     private String dbadmin = null;
     private String dbadminpwd = null;
-    private String srcdir = null;
     private String epsg = null;
 
     private LinkedHashMap featureTypes = null;
 	private String featureName = null;
 
-	private LinkedHashMap collections = new LinkedHashMap();
 	private ArrayList features = null;
 	private ArrayList areaHelperFeatures = new ArrayList();
 	private ArrayList surfaceMainFeatures = new ArrayList();
-    //private FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
-    //private SimpleFeatureCollection areaHelperCollection = null;
-    //private SimpleFeatureCollection surfaceMainCollection = null;
 	
 	private DataStore datastore = null;
 
@@ -135,7 +97,7 @@ public class IliReader {
 
     public IliReader(String itf, String epsg, HashMap params) throws IllegalArgumentException, IOException, ClassNotFoundException, SQLException, Exception 
     {
-    	logger.setLevel(Level.DEBUG);
+    	logger.setLevel(Level.INFO);
 
     	// get parameters
     	this.params = params;
@@ -715,7 +677,7 @@ public class IliReader {
     		store.setTransaction(t);
 
     		try {    				
-    		    logger.debug("Add features: " + featureName);
+    		    logger.info("Add features: " + featureName);
     		    store.addFeatures(collection);
 
     		} catch ( IOException ex ) {

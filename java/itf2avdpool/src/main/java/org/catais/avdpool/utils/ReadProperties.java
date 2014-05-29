@@ -95,29 +95,47 @@ public class ReadProperties {
 		}
     	logger.debug("dbadminpwd: " + adminpwd);	
     	
-    	// sqlite file
-    	String sqlite = properties.getProperty("sqlite");
-    	if (sqlite != null) {
-    		params.put("sqlite", sqlite.trim());
-    	} else {
-			throw new IllegalArgumentException("'sqlite' parameter not set.");
-		}
-    	
-    	// destination directory
-    	String dstdir = properties.getProperty("dstdir");
-    	if (dstdir != null) {
-    		params.put("dstdir", dstdir.trim());
-    	} else {
-			throw new IllegalArgumentException("'dstdir' parameter not set.");
-		}
-    	
-        // temporary destination directory
-        String tmpdstdir = properties.getProperty("tmpdstdir");
-        if (dstdir != null) {
-            params.put("tmpdstdir", tmpdstdir.trim());
+        // destination directory
+        String srcdir = properties.getProperty("srcdir");
+        if (srcdir != null) {
+            params.put("srcdir", srcdir.trim());
         } else {
-            throw new IllegalArgumentException("'tmpdstdir' parameter not set.");
+            throw new IllegalArgumentException("'srcdir' parameter not set.");
         }    	
+    	
+        // import ALL itf files
+        String doAll = properties.getProperty("all");
+        boolean all = false;
+        if (doAll != null) {
+            all = Boolean.parseBoolean(doAll.trim());
+        }
+        params.put("all", all);
+        logger.debug("all: " + all);
+
+        
+//    	// sqlite file
+//    	String sqlite = properties.getProperty("sqlite");
+//    	if (sqlite != null) {
+//    		params.put("sqlite", sqlite.trim());
+//    	} else {
+//			throw new IllegalArgumentException("'sqlite' parameter not set.");
+//		}
+//    	
+//    	// destination directory
+//    	String dstdir = properties.getProperty("dstdir");
+//    	if (dstdir != null) {
+//    		params.put("dstdir", dstdir.trim());
+//    	} else {
+//			throw new IllegalArgumentException("'dstdir' parameter not set.");
+//		}
+//    	
+//        // temporary destination directory
+//        String tmpdstdir = properties.getProperty("tmpdstdir");
+//        if (dstdir != null) {
+//            params.put("tmpdstdir", tmpdstdir.trim());
+//        } else {
+//            throw new IllegalArgumentException("'tmpdstdir' parameter not set.");
+//        }    	
     	
     	return params;
     }

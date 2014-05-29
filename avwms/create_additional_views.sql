@@ -15,6 +15,26 @@ ALTER TABLE av_avwms.soobj OWNER TO stefan;
 GRANT ALL ON TABLE av_avwms.soobj TO stefan;
 GRANT SELECT ON TABLE av_avwms.soobj TO mspublic;
 */
+/*
+CREATE OR REPLACE VIEW av_avwms.osnr_v AS 
+
+SELECT ROW_NUMBER() OVER (ORDER BY ogc_fid ASC) AS row_num, * 
+FROM
+(
+
+  SELECT ogc_fid, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt, art 
+  FROM
+  (
+    SELECT ogc_fid, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt, 1 as art FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos
+    UNION
+    SELECT ogc_fid, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt, 0 as art FROM av_mopublic.liegenschaften__liegenschaftpos
+  ) as a
+) as b;
+
+ALTER TABLE av_avwms.soobj OWNER TO stefan;
+GRANT ALL ON TABLE av_avwms.soobj TO stefan;
+GRANT SELECT ON TABLE av_avwms.soobj TO mspublic;
+*/
 
 CREATE OR REPLACE VIEW av_avwms.cppt AS 
 

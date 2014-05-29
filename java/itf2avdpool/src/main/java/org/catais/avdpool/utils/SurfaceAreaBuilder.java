@@ -8,6 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.feature.FeatureCollection;
@@ -22,8 +23,10 @@ import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.LineString;
 import com.vividsolutions.jts.geom.LinearRing;
+import com.vividsolutions.jts.geom.MultiLineString;
 import com.vividsolutions.jts.geom.Polygon;
 import com.vividsolutions.jts.geom.prep.PreparedPoint;
+import com.vividsolutions.jts.geom.prep.PreparedPolygon;
 import com.vividsolutions.jts.geom.util.LinearComponentExtracter;
 import com.vividsolutions.jts.index.SpatialIndex;
 import com.vividsolutions.jts.index.strtree.STRtree;
@@ -37,6 +40,8 @@ public class SurfaceAreaBuilder {
 	
 	public static SimpleFeatureCollection buildSurface( SimpleFeatureCollection surfaceMainCollection, SimpleFeatureCollection surfaceHelperCollection ) 
 	{
+	    logger.setLevel(Level.INFO);
+	    
 		SimpleFeatureCollection collection = null;
 		ArrayList featureList = new ArrayList();
 
@@ -150,6 +155,8 @@ public class SurfaceAreaBuilder {
 	
 	public static SimpleFeatureCollection buildArea( SimpleFeatureCollection areaMainCollection, SimpleFeatureCollection areaHelperCollection )
 	{
+	    logger.setLevel(Level.DEBUG);
+ 
 		SimpleFeatureCollection collection = null;
 		ArrayList features = new ArrayList();
 		
@@ -177,49 +184,111 @@ public class SurfaceAreaBuilder {
 			// There can be very small holes!!!!
 
 			ArrayList polys = (ArrayList) polygonizer.getPolygons();
-
-			final SpatialIndex spatialIndex = new STRtree();
-			for ( int i = 0; i < polys.size(); i++ ) 
-			{
-				Polygon p = (Polygon) polys.get(i);
-				spatialIndex.insert(p.getEnvelopeInternal(), p);
-			}
-			logger.debug("spatial index built.");
 			
-			
-			FeatureIterator kt = areaMainCollection.features();		
+			final SpatialIndex idx = new STRtree();
+			FeatureIterator mt = areaMainCollection.features();
 			try 
 			{
-				while( kt.hasNext() )
-				{
-					SimpleFeature feat = (SimpleFeature) kt.next();
-					Geometry point = (Geometry) feat.getAttribute( geomName + "_point" );
-					try 
-					{
-						PreparedPoint ppoint = new PreparedPoint( point.getInteriorPoint() );
-						for ( final Object o : spatialIndex.query( point.getEnvelopeInternal() ) ) 
-						{
-							Polygon p = (Polygon) o;
-							if( ppoint.intersects( p ) ) 
-							{                                      
-								feat.setAttribute( geomName, p );
-								features.add( feat );
-							}
-						} 
-					} catch ( NullPointerException ex ) 
-					{
-						ex.printStackTrace();
-						logger.error( ex.getMessage() );
-						logger.error( "empty point" );
-					}
-				}
-			}
-			finally 
+    			while(mt.hasNext()) {
+    			    try {
+    			        SimpleFeature feat = (SimpleFeature) mt.next();
+    			        Geometry point = (Geometry) feat.getAttribute(geomName + "_point");
+    			        idx.insert(point.getEnvelopeInternal(), feat);
+    			    }
+    			    catch (NullPointerException e) {
+    			        // Gibts anscheinend in anderen Kantonen.
+    			        logger.warn("empty point");
+    			    }
+    			}
+			} finally 
 			{
-			     kt.close();
+	            mt.close();
 			}
+    			
+
+            ArrayList<Polygon> holes = new ArrayList();
+            
+            for (int i = 0; i < polys.size(); i++) {
+                boolean found = false;
+                Polygon p = (Polygon) polys.get(i);
+                PreparedPolygon ppoly = new PreparedPolygon(p);
+
+                for (final Object o : idx.query(p.getEnvelopeInternal())) {
+                    SimpleFeature f = (SimpleFeature) o;
+                    
+                    // Funktioniert auch intersect? Schneller?
+                    if(ppoly.contains(((Geometry) f.getAttribute(geomName + "_point"))))  {                        
+                        f.setAttribute(geomName, p);
+                        features.add(f);
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) {                    
+                    
+                    // Falls wirklich bewusste Löcher im Datensatz sind, führt das zu falschen 
+                    // Resultaten. Nur zu den "holes" hinzufügen, falls kleiner
+                    // als ein bestimmter Wert.
+                    if (p.getArea() < 1.0) {
+                        holes.add(p);
+                    }
+                }
+            }
+
+            // Restflächen, die aufgrund des neu Verknotens entstanden sind,
+            // werden dem Polygon mit der längsten gemeinsamen Kanten zugewiesen.
+            // Mal schauen obs schon hinhaut.
+            boolean repair = true;
+            if (repair) {
+                final SpatialIndex spatialIndex = new STRtree();
+                Iterator nt = features.iterator();
+        
+                while(nt.hasNext()) {
+                    SimpleFeature feat = (SimpleFeature) nt.next();
+                    Geometry point = (Geometry) feat.getAttribute(geomName);
+                    spatialIndex.insert(point.getEnvelopeInternal(), feat);       
+                }
+            
+                logger.debug("Anzahl Löcher: ");
+                logger.debug(holes.size());
+                for (int i = 0; i < holes.size(); i++) {
+                    Polygon p = holes.get(i);
+                    PreparedPolygon ppoly = new PreparedPolygon(p);
+
+                    double length = 0.0;
+                    SimpleFeature feat = null;
+
+                    for (final Object o : spatialIndex.query(p.getEnvelopeInternal())) {
+                        SimpleFeature f = (SimpleFeature) o;
+                        Geometry g = ((Geometry) f.getAttribute(geomName));
+                        if (ppoly.intersects(g)) {
+//                            logger.debug("***************************");
+//                            logger.debug(p.toString());
+//                            logger.debug(g.toString());
+                            Geometry geom = p.intersection(g);
+//                            logger.debug(geom.toString());
+                            if (geom instanceof LineString || geom instanceof MultiLineString) {
+//                                logger.debug("gespeichert: " + length);
+//                                logger.debug("aktuell: " + geom.getLength());
+//                                logger.debug("diff: " + (geom.getLength()-length));
+                                if (geom.getLength() > length) {
+//                                    logger.debug("grösser");
+                                    length = geom.getLength();
+                                    feat = f;
+                                }
+                            }
+                        }
+//                        logger.debug("length: ");
+//                        logger.debug(length);
+                    }
+                    Geometry geomOld = (Geometry) feat.getAttribute(geomName);
+                    Geometry geomNew = geomOld.union(p);
+                    feat.setAttribute(geomName, geomNew);  
+                }
+            }  
 		}
-		logger.debug( "Anzahl polygonierte/gejointe Features (Area): " + features.size() );
+//		logger.debug( "Anzahl polygonierte/gejointe Features (Area): " + features.size() );
 		collection = DataUtilities.collection( features );
 		return collection;
 	}

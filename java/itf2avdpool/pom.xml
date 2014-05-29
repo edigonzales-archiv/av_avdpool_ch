@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <geotools.version>10-SNAPSHOT</geotools.version>    
+    <geotools.version>12-SNAPSHOT</geotools.version>    
   </properties>
 
   <build>
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>ch.interlis</groupId>
       <artifactId>ili2c</artifactId>
-      <version>4.4.8</version>
+      <version>4.5.3</version>
     </dependency>   
     <dependency>
       <groupId>ch.interlis</groupId>
@@ -139,9 +139,9 @@
       <url>http://repo.opengeo.org/</url>
     </repository>
     <repository>
-      <id>sogeo</id>
-      <name>sogeo</name>
-      <url>http://www.sogeo.ch/maven/repository/release/</url>
+      <id>catais</id>
+      <name>cataias</name>
+      <url>http://www.catais.org/maven/repository/release/</url>
     </repository>
   </repositories>   
  
