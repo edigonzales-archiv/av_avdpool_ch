@@ -5,7 +5,7 @@ CREATE TABLE av_mopublic.einzelobjekte__flaechenelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Sollte das nicht *art* heissen?
+  art varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
   geometrie geometry(Polygon,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,
@@ -113,7 +113,7 @@ CREATE TABLE av_mopublic.einzelobjekte__linienelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Sollte das nicht *art* heissen?
+  art varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
   geometrie geometry(Linestring,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,
@@ -221,7 +221,7 @@ CREATE TABLE av_mopublic.einzelobjekte__punktelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Sollte das nicht *art* heissen?
+  art varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
   geometrie geometry(Point,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,

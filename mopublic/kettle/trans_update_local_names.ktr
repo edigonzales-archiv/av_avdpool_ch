@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -62,9 +67,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2013&#47;08&#47;14 18:35:29.297</created_date>
+  <created_date>2013&#x2f;08&#x2f;14 18&#x3a;35&#x3a;29.297</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;08&#47;14 18:35:29.297</modified_date>
+  <modified_date>2013&#x2f;08&#x2f;14 18&#x3a;35&#x3a;29.297</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -73,7 +78,7 @@
     <server>SQLite</server>
     <type>SQLITE</type>
     <access>Native</access>
-    <database>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;sqlite&#47;av_avdpool_ch.sqlite</database>
+    <database>&#x2f;home&#x2f;stefan&#x2f;Projekte&#x2f;av_avdpool_ch&#x2f;sqlite&#x2f;av_avdpool_ch.sqlite</database>
     <port>-1</port>
     <username/>
     <password>Encrypted </password>
@@ -87,6 +92,74 @@
       <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>rosebud2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>mspublic</username>
+    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>srsofaioi4531</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>xanadu2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>xanadu2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -113,12 +186,15 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get rows from result</from><to>Namen</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>NamenPos</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get rows from result</from><to>Namen</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>NamenPos</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Get rows from result</name>
     <type>RowsFromResult</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -141,44 +217,19 @@
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.nomenklatur__namen WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.nomenklatur__namen (tid, kategorie, &quot;name&quot;, geometrie, typ, stand_am, bfsnr)
-SELECT tid, category as kategorie, name as &quot;name&quot;, geometry as geometrie, type as typ, to_date(stand_am, &apos;YYYYMMDD&apos;) as stand_am, fosnr as bfsnr 
-FROM 
-(
-  SELECT a.ogc_fid, a.tid, b.designation_d as category, name, geometrie as geometry, NULL::varchar as type, 
-                 CASE 
-                    WHEN c.gueltigereintrag IS NULL THEN c.datum1
-		    ELSE c.gueltigereintrag
-                END AS stand_am,
-                a.gem_bfs as fosnr
-  FROM av_avdpool_ch.nomenklatur_flurname as a, av_mopublic_meta.local_names_type as b, av_avdpool_ch.nomenklatur_nknachfuehrung as c
-  WHERE a.gem_bfs = ? AND c.gem_bfs = ?
-  AND c.tid = a.entstehung
-  AND 0 = b.code
-  
-UNION
-  SELECT a.ogc_fid, a.tid, b.designation_d as category, name, geometrie as geometry, NULL::varchar as type, 
-                 CASE 
-                    WHEN c.gueltigereintrag IS NULL THEN c.datum1
-		    ELSE c.gueltigereintrag
-                END AS stand_am,
-                a.gem_bfs as fosnr
-  FROM av_avdpool_ch.nomenklatur_ortsname as a, av_mopublic_meta.local_names_type as b, av_avdpool_ch.nomenklatur_nknachfuehrung as c
-  WHERE a.gem_bfs = ? AND c.gem_bfs = ?
-  AND c.tid = a.entstehung
-  AND 1 = b.code
-) as a;</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.nomenklatur__namen WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.nomenklatur__namen &#x28;tid, kategorie, &#x22;name&#x22;, geometrie, typ, stand_am, bfsnr&#x29;&#xa;SELECT tid, category as kategorie, name as &#x22;name&#x22;, geometry as geometrie, type as typ, to_date&#x28;stand_am, &#x27;YYYYMMDD&#x27;&#x29; as stand_am, fosnr as bfsnr &#xa;FROM &#xa;&#x28;&#xa;  SELECT a.ogc_fid, a.tid, b.designation_d as category, name, geometrie as geometry, NULL&#x3a;&#x3a;varchar as type, &#xa;                 CASE &#xa;                    WHEN c.gueltigereintrag IS NULL THEN c.datum1&#xa;		            ELSE c.gueltigereintrag&#xa;                END AS stand_am,&#xa;                a.gem_bfs as fosnr&#xa;  FROM av_avdpool_ch.nomenklatur_flurname as a, av_mopublic_meta.local_names_type as b, av_avdpool_ch.nomenklatur_nknachfuehrung as c&#xa;  WHERE a.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f;&#xa;  AND c.tid &#x3d; a.entstehung&#xa;  AND 0 &#x3d; b.code&#xa;  &#xa;UNION&#xa;  SELECT a.ogc_fid, a.tid, b.designation_d as category, name, geometrie as geometry, a.typ as type, &#xa;                 CASE &#xa;                    WHEN c.gueltigereintrag IS NULL THEN c.datum1&#xa;		            ELSE c.gueltigereintrag&#xa;                END AS stand_am,&#xa;                a.gem_bfs as fosnr&#xa;  FROM av_avdpool_ch.nomenklatur_ortsname as a, av_mopublic_meta.local_names_type as b, av_avdpool_ch.nomenklatur_nknachfuehrung as c&#xa;  WHERE a.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f;&#xa;  AND c.tid &#x3d; a.entstehung&#xa;  AND 1 &#x3d; b.code&#xa;&#x29; as a&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -203,38 +254,19 @@ UNION
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.nomenklatur__namenpos (tid, namenpos_von, kategorie, &quot;name&quot;, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
-SELECT tid, posname_of as namenpos_von, category as kategorie, name as &quot;name&quot;, pos as pos, ori as ori, hali, vali, fosnr as bfsnr, ST_X(pos) AS y, ST_Y(pos) AS x, (100::double precision - ori) * 0.9::double precision AS rot, hali_txt, vali_txt  
-FROM (
-  SELECT a.ogc_fid, a.tid, a.flurnamepos_von as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr
-  FROM av_avdpool_ch.nomenklatur_flurnamepos as a, av_avdpool_ch.nomenklatur_flurname as b, av_mopublic_meta.local_names_type as c
-  WHERE a.gem_bfs = ? AND b.gem_bfs = ? 
-  AND b.tid = a.flurnamepos_von
-  AND 0 = c.code 
-UNION
-  SELECT a.ogc_fid, a.tid, a.ortsnamepos_von as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr
-  FROM av_avdpool_ch.nomenklatur_ortsnamepos as a, av_avdpool_ch.nomenklatur_ortsname as b, av_mopublic_meta.local_names_type as c
-  WHERE a.gem_bfs = ? AND b.gem_bfs = ? 
-  AND b.tid = a.ortsnamepos_von
-  AND 1 = c.code   
-UNION
-  SELECT a.ogc_fid, a.tid, NULL::varchar as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr
-  FROM av_avdpool_ch.nomenklatur_gelaendenamepos as a, av_avdpool_ch.nomenklatur_gelaendename as b, av_mopublic_meta.local_names_type as c
-  WHERE a.gem_bfs = ? AND b.gem_bfs = ? 
-  AND b.tid = a.gelaendenamepos_von
-  AND 2 = c.code 
-) as a;</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.nomenklatur__namenpos &#x28;tid, namenpos_von, kategorie, &#x22;name&#x22;, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT tid, posname_of as namenpos_von, category as kategorie, name as &#x22;name&#x22;, pos as pos, &#xa; CASE WHEN ori IS NULL&#xa;  THEN 100&#xa;  ELSE ori&#xa; END as ori,&#xa; CASE WHEN hali IS NULL&#xa;  THEN 1&#xa;  ELSE hali&#xa; END as hali,&#xa; CASE WHEN vali IS NULL&#xa;  THEN 2&#xa;  ELSE vali&#xa; END as vali,&#xa;fosnr as bfsnr, ST_X&#x28;pos&#x29; AS y, ST_Y&#x28;pos&#x29; AS x, &#xa; CASE WHEN ori IS NULL&#xa;  THEN 0&#xa;  ELSE &#x28;100&#x3a;&#x3a;double precision - ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa; END as rot,&#xa; CASE WHEN hali_txt IS NULL&#xa;  THEN &#x27;Center&#x27;&#xa;  ELSE hali_txt&#xa; END as hali_txt,&#xa; CASE WHEN vali_txt IS NULL&#xa;  THEN &#x27;Half&#x27;&#xa;  ELSE vali_txt&#xa; END as vali_txt&#xa;FROM &#x28;&#xa;  SELECT a.ogc_fid, a.tid, a.flurnamepos_von as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr&#xa;  FROM av_avdpool_ch.nomenklatur_flurnamepos as a, av_avdpool_ch.nomenklatur_flurname as b, av_mopublic_meta.local_names_type as c&#xa;  WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; &#xa;  AND b.tid &#x3d; a.flurnamepos_von&#xa;  AND 0 &#x3d; c.code &#xa;UNION&#xa;  SELECT a.ogc_fid, a.tid, a.ortsnamepos_von as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr&#xa;  FROM av_avdpool_ch.nomenklatur_ortsnamepos as a, av_avdpool_ch.nomenklatur_ortsname as b, av_mopublic_meta.local_names_type as c&#xa;  WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; &#xa;  AND b.tid &#x3d; a.ortsnamepos_von&#xa;  AND 1 &#x3d; c.code   &#xa;UNION&#xa;  SELECT a.ogc_fid, a.tid, NULL&#x3a;&#x3a;varchar as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr&#xa;  FROM av_avdpool_ch.nomenklatur_gelaendenamepos as a, av_avdpool_ch.nomenklatur_gelaendename as b, av_mopublic_meta.local_names_type as c&#xa;  WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; &#xa;  AND b.tid &#x3d; a.gelaendenamepos_von&#xa;  AND 2 &#x3d; c.code &#xa;&#x29; as a&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -261,4 +293,5 @@ UNION
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

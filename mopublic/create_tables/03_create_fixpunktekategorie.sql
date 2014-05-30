@@ -1,4 +1,4 @@
-﻿-- DROP TABLE av_mopublic.fixpunktekategorie__lfp;
+-- DROP TABLE av_mopublic.fixpunktekategorie__lfp;
 CREATE TABLE av_mopublic.fixpunktekategorie__lfp  
 (
   ogc_fid serial PRIMARY KEY,
@@ -6,7 +6,7 @@ CREATE TABLE av_mopublic.fixpunktekategorie__lfp
   kategorie varchar NOT NULL,
   nbident varchar(12) NOT NULL,
   nummer varchar(12) NOT NULL,
-  geometrie geometry(POINT, 21781),
+  geometrie geometry(PointZ, 21781),
   lagegen decimal(5,1) NULL,
   hoehegeom decimal(8,3) NULL,
   hoehegen decimal(5,1) NULL,
@@ -44,4 +44,4 @@ CREATE INDEX idx_fixpunktekategorie__lfp_ogc_fid
 CREATE INDEX idx_fixpunktekategorie__lfp_tid
   ON av_mopublic.fixpunktekategorie__lfp
   USING btree
-  (tid);  
+  (tid);

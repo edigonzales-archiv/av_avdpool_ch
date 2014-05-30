@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -62,18 +67,39 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2013&#47;08&#47;14 18:35:29.297</created_date>
+  <created_date>2013&#x2f;08&#x2f;14 18&#x3a;35&#x3a;29.297</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;08&#47;14 18:35:29.297</modified_date>
+  <modified_date>2013&#x2f;08&#x2f;14 18&#x3a;35&#x3a;29.297</modified_date>
   </info>
   <notepads>
+    <notepad>
+      <note>&#x2a; Auch hier wird neu EGID abgef&#xfc;llt -&#x3e; Pr&#xfc;fen, ob viele Fehler entstehen&#x21;&#xa;&#x2a; typ -&#x3e; art&#x3a; Zur Abkl&#xe4;rung bei swisstopo. Modell k&#xf6;nnte falsch sein&#x3f;&#x21;&#xa;&#x2a; Kann ein Linienelement einen EGID haben&#x3f;</note>
+      <xloc>69</xloc>
+      <yloc>396</yloc>
+      <width>402</width>
+      <heigth>49</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>av_avdpool_ch</name>
     <server>SQLite</server>
     <type>SQLITE</type>
     <access>Native</access>
-    <database>&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ch&#47;sqlite&#47;av_avdpool_ch.sqlite</database>
+    <database>&#x2f;home&#x2f;stefan&#x2f;Projekte&#x2f;av_avdpool_ch&#x2f;sqlite&#x2f;av_avdpool_ch.sqlite</database>
     <port>-1</port>
     <username/>
     <password>Encrypted </password>
@@ -87,6 +113,74 @@
       <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>rosebud2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>mspublic</username>
+    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>srsofaioi4531</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>xanadu2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>xanadu2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -113,48 +207,37 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get rows from result</from><to>Flaechenelement</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>FlaechenelementText</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>Linienelement</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>LinienelementText</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>Punktelement</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result</from><to>PunktelementText</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get rows from result</from><to>Flaechenelement</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>FlaechenelementText</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>Linienelement</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>LinienelementText</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>Punktelement</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>PunktelementText</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Flaechenelement</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelement WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__flaechenelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
-
-SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL::integer AS gwr_egid, to_date(b.stand_am, &apos;YYYYMMDD&apos;) as stand_am, b.gem_bfs AS bfsnr
-FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, 
-( 
-  SELECT b.tid, b.gem_bfs, b.flaechenelement_von, a.art, c.gueltigkeit, 
-                CASE
-                    WHEN a.qualitaet IS NULL THEN 0
-                    ELSE a.qualitaet
-                END AS qualitaet, 
-                CASE 
-                    WHEN c.gueltigereintrag IS NULL THEN c.datum1
-		    ELSE c.gueltigereintrag
-                END AS stand_am,
-                b.geometrie
-   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_flaechenelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c
-   WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND a.tid::text = b.flaechenelement_von::text AND c.tid::text = a.entstehung::text
-) b, av_mopublic_meta.validity_type e
-WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.code AND b.gueltigkeit::double precision = e.code;
-</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelement WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__flaechenelement &#x28;tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr&#x29;&#xa;&#xa;SELECT g.tid, g.gueltigkeit, g.typ, g.geometrie, g.qualitaetsstandard, h.gwr_egid, g.stand_am, g.bfsnr&#xa;FROM&#xa;&#x28;&#xa; SELECT b.tid, b.flaechenelement_von, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL&#x3a;&#x3a;integer AS gwr_egid, to_date&#x28;b.stand_am, &#x27;YYYYMMDD&#x27;&#x29; as stand_am, b.gem_bfs AS bfsnr&#xa; FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, &#xa; &#x28; &#xa;  SELECT b.tid, b.gem_bfs, b.flaechenelement_von, a.art, c.gueltigkeit, &#xa;                CASE&#xa;                    WHEN a.qualitaet IS NULL THEN 0&#xa;                    ELSE a.qualitaet&#xa;                END AS qualitaet, &#xa;                CASE &#xa;                    WHEN c.gueltigereintrag IS NULL THEN c.datum1&#xa;		            ELSE c.gueltigereintrag&#xa;                END AS stand_am,&#xa;                b.geometrie&#xa;   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_flaechenelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c&#xa;   WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND a.tid&#x3a;&#x3a;text &#x3d; b.flaechenelement_von&#x3a;&#x3a;text AND c.tid&#x3a;&#x3a;text &#x3d; a.entstehung&#x3a;&#x3a;text&#xa; &#x29; b, av_mopublic_meta.validity_type e&#xa; WHERE b.art&#x3a;&#x3a;double precision &#x3d; c.code AND b.qualitaet&#x3a;&#x3a;double precision &#x3d; d.code AND b.gueltigkeit&#x3a;&#x3a;double precision &#x3d; e.code&#xa;&#x29; as g&#xa;LEFT JOIN &#xa;&#x28;&#xa; SELECT &#x2a;&#xa; FROM av_avdpool_ch.einzelobjekte_objektnummer&#xa; WHERE gem_bfs &#x3d; &#x3f;&#xa;&#x29; as h ON h.objektnummer_von &#x3d; g.flaechenelement_von&#x3b; </sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
     <read_field/>
     <arguments>
+       <argument><name>gem_bfs</name></argument>
        <argument><name>gem_bfs</name></argument>
        <argument><name>gem_bfs</name></argument>
        <argument><name>gem_bfs</name></argument>
@@ -173,25 +256,19 @@ WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.cod
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelementtext WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__flaechenelementtext (tid, flaechenelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
-SELECT DISTINCT a.tid as tid, a.objektname_von as flaechenelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, b.hali as hali, b.vali as vali, a.gem_bfs as bfsnr,st_x(b.pos) AS y, st_y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot, b.hali_txt, b.vali_txt
-FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_flaechenelement as d, av_mopublic_meta.text_type as e 
-WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
-AND b.objektnamepos_von = a.tid
-AND a.objektname_von = c.tid
-AND d.flaechenelement_von = c.tid
-AND 1 = e.code;</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelementtext WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__flaechenelementtext &#x28;tid, flaechenelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT DISTINCT a.tid as tid, a.objektname_von as flaechenelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, &#xa; CASE WHEN b.hali IS NULL&#xa;  THEN 1&#xa;  ELSE b.hali&#xa; END as hali,&#xa; CASE WHEN b.vali IS NULL&#xa;  THEN 2&#xa;  ELSE b.vali&#xa; END as vali,&#xa;a.gem_bfs as bfsnr,st_x&#x28;b.pos&#x29; AS y, st_y&#x28;b.pos&#x29; AS x, &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision AS rot, &#xa; CASE WHEN b.hali_txt IS NULL&#xa;  THEN &#x27;Center&#x27;&#xa;  ELSE b.hali_txt&#xa; END as hali_txt,&#xa; CASE WHEN b.vali_txt IS NULL&#xa;  THEN &#x27;Half&#x27;&#xa;  ELSE b.vali_txt&#xa; END as vali_txt&#xa;FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_flaechenelement as d, av_mopublic_meta.text_type as e &#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f;&#xa;AND b.objektnamepos_von &#x3d; a.tid&#xa;AND a.objektname_von &#x3d; c.tid&#xa;AND d.flaechenelement_von &#x3d; c.tid&#xa;AND 1 &#x3d; e.code&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -212,40 +289,46 @@ AND 1 = e.code;</sql>
     </step>
 
   <step>
-    <name>Linienelement</name>
-    <type>ExecSQL</type>
+    <name>Get rows from result</name>
+    <type>RowsFromResult</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <fields>      <field>        <name>gem_bfs</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>378</xloc>
+      <yloc>51</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Linienelement</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__linienelement WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__linienelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
-SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL::integer AS gwr_egid, to_date(b.stand_am, &apos;YYYYMMDD&apos;) as stand_am, b.gem_bfs AS bfsnr
-FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, 
-( 
-  SELECT b.tid, b.gem_bfs, b.linienelement_von, a.art, c.gueltigkeit, 
-                CASE
-                    WHEN a.qualitaet IS NULL THEN 0
-                    ELSE a.qualitaet
-                END AS qualitaet, 
-                CASE 
-                    WHEN c.gueltigereintrag IS NULL THEN c.datum1
-		    ELSE c.gueltigereintrag
-                END AS stand_am,
-                b.geometrie
-   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_linienelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c
-   WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND a.tid::text = b.linienelement_von::text AND c.tid::text = a.entstehung::text
-) b, av_mopublic_meta.validity_type e
-WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.code AND b.gueltigkeit::double precision = e.code;
-</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__linienelement WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__linienelement &#x28;tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr&#x29;&#xa;SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL&#x3a;&#x3a;integer AS gwr_egid, to_date&#x28;b.stand_am, &#x27;YYYYMMDD&#x27;&#x29; as stand_am, b.gem_bfs AS bfsnr&#xa;FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, &#xa;&#x28; &#xa;  SELECT b.tid, b.gem_bfs, b.linienelement_von, a.art, c.gueltigkeit, &#xa;                CASE&#xa;                    WHEN a.qualitaet IS NULL THEN 0&#xa;                    ELSE a.qualitaet&#xa;                END AS qualitaet, &#xa;                CASE &#xa;                    WHEN c.gueltigereintrag IS NULL THEN c.datum1&#xa;		            ELSE c.gueltigereintrag&#xa;                END AS stand_am,&#xa;                b.geometrie&#xa;   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_linienelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c&#xa;   WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND a.tid&#x3a;&#x3a;text &#x3d; b.linienelement_von&#x3a;&#x3a;text AND c.tid&#x3a;&#x3a;text &#x3d; a.entstehung&#x3a;&#x3a;text&#xa;&#x29; b, av_mopublic_meta.validity_type e&#xa;WHERE b.art&#x3a;&#x3a;double precision &#x3d; c.code AND b.qualitaet&#x3a;&#x3a;double precision &#x3d; d.code AND b.gueltigkeit&#x3a;&#x3a;double precision &#x3d; e.code&#x3b;&#xa;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -269,25 +352,19 @@ WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.cod
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__linienelementtext WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__linienelementtext (tid, linienelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
-SELECT DISTINCT a.tid as tid, a.objektname_von as linienelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, b.hali as hali, b.vali as vali, a.gem_bfs as bfsnr,st_x(b.pos) AS y, st_y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot, b.hali_txt, b.vali_txt
-FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_linienelement as d, av_mopublic_meta.text_type as e 
-WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
-AND b.objektnamepos_von = a.tid
-AND a.objektname_von = c.tid
-AND d.linienelement_von = c.tid
-AND 1 = e.code;</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__linienelementtext WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__linienelementtext &#x28;tid, linienelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT DISTINCT a.tid as tid, a.objektname_von as linienelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, &#xa; CASE WHEN b.hali IS NULL&#xa;  THEN 1&#xa;  ELSE b.hali&#xa; END as hali,&#xa; CASE WHEN b.vali IS NULL&#xa;  THEN 2&#xa;  ELSE b.vali&#xa; END as vali,&#xa;a.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision AS rot,  &#xa; CASE WHEN b.hali_txt IS NULL&#xa;  THEN &#x27;Center&#x27;&#xa;  ELSE b.hali_txt&#xa; END as hali_txt,&#xa; CASE WHEN b.vali_txt IS NULL&#xa;  THEN &#x27;Half&#x27;&#xa;  ELSE b.vali_txt&#xa; END as vali_txt&#xa;FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_linienelement as d, av_mopublic_meta.text_type as e &#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f;&#xa;AND b.objektnamepos_von &#x3d; a.tid&#xa;AND a.objektname_von &#x3d; c.tid&#xa;AND d.linienelement_von &#x3d; c.tid&#xa;AND 1 &#x3d; e.code&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -312,37 +389,19 @@ AND 1 = e.code;</sql>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__punktelement WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__punktelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
-SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL::integer AS gwr_egid, to_date(b.stand_am, &apos;YYYYMMDD&apos;) as stand_am, b.gem_bfs AS bfsnr
-FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, 
-( 
-  SELECT b.tid, b.gem_bfs, b.punktelement_von, a.art, c.gueltigkeit, 
-                CASE
-                    WHEN a.qualitaet IS NULL THEN 0
-                    ELSE a.qualitaet
-                END AS qualitaet, 
-                CASE 
-                    WHEN c.gueltigereintrag IS NULL THEN c.datum1
-		    ELSE c.gueltigereintrag
-                END AS stand_am,
-                b.geometrie
-   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_punktelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c
-   WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND a.tid::text = b.punktelement_von::text AND c.tid::text = a.entstehung::text
-) b, av_mopublic_meta.validity_type e
-WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.code AND b.gueltigkeit::double precision = e.code;
-
-</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__punktelement WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__punktelement &#x28;tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr&#x29;&#xa;SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL&#x3a;&#x3a;integer AS gwr_egid, to_date&#x28;b.stand_am, &#x27;YYYYMMDD&#x27;&#x29; as stand_am, b.gem_bfs AS bfsnr&#xa;FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, &#xa;&#x28; &#xa;  SELECT b.tid, b.gem_bfs, b.punktelement_von, a.art, c.gueltigkeit, &#xa;                CASE&#xa;                    WHEN a.qualitaet IS NULL THEN 0&#xa;                    ELSE a.qualitaet&#xa;                END AS qualitaet, &#xa;                CASE &#xa;                    WHEN c.gueltigereintrag IS NULL THEN c.datum1&#xa;		            ELSE c.gueltigereintrag&#xa;                END AS stand_am,&#xa;                b.geometrie&#xa;   FROM av_avdpool_ch.einzelobjekte_einzelobjekt a, av_avdpool_ch.einzelobjekte_punktelement b, av_avdpool_ch.einzelobjekte_eonachfuehrung c&#xa;   WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND a.tid&#x3a;&#x3a;text &#x3d; b.punktelement_von&#x3a;&#x3a;text AND c.tid&#x3a;&#x3a;text &#x3d; a.entstehung&#x3a;&#x3a;text&#xa;&#x29; b, av_mopublic_meta.validity_type e&#xa;WHERE b.art&#x3a;&#x3a;double precision &#x3d; c.code AND b.qualitaet&#x3a;&#x3a;double precision &#x3d; d.code AND b.gueltigkeit&#x3a;&#x3a;double precision &#x3d; e.code&#x3b;&#xa;&#xa;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -366,25 +425,19 @@ WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.cod
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.einzelobjekte__punktelementtext WHERE bfsnr = ?;
-
-INSERT INTO av_mopublic.einzelobjekte__punktelementtext (tid, punktelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
-SELECT DISTINCT a.tid as tid, a.objektname_von as punktelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, b.hali as hali, b.vali as vali, a.gem_bfs as bfsnr,st_x(b.pos) AS y, st_y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot, b.hali_txt, b.vali_txt
-FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_punktelement as d, av_mopublic_meta.text_type as e 
-WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
-AND b.objektnamepos_von = a.tid
-AND a.objektname_von = c.tid
-AND d.punktelement_von = c.tid
-AND 1 = e.code;</sql>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__punktelementtext WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.einzelobjekte__punktelementtext &#x28;tid, punktelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT DISTINCT a.tid as tid, a.objektname_von as punktelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, &#xa; CASE WHEN b.hali IS NULL&#xa;  THEN 1&#xa;  ELSE b.hali&#xa; END as hali,&#xa; CASE WHEN b.vali IS NULL&#xa;  THEN 2&#xa;  ELSE b.vali&#xa; END as vali,a.gem_bfs as bfsnr,st_x&#x28;b.pos&#x29; AS y, st_y&#x28;b.pos&#x29; AS x, &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision AS rot, &#xa; CASE WHEN b.hali_txt IS NULL&#xa;  THEN &#x27;Center&#x27;&#xa;  ELSE b.hali_txt&#xa; END as hali_txt,&#xa; CASE WHEN b.vali_txt IS NULL&#xa;  THEN &#x27;Half&#x27;&#xa;  ELSE b.vali_txt&#xa; END as vali_txt&#xa;FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_punktelement as d, av_mopublic_meta.text_type as e &#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND c.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f;&#xa;AND b.objektnamepos_von &#x3d; a.tid&#xa;AND a.objektname_von &#x3d; c.tid&#xa;AND d.punktelement_von &#x3d; c.tid&#xa;AND 1 &#x3d; e.code&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -404,31 +457,10 @@ AND 1 = e.code;</sql>
       </GUI>
     </step>
 
-  <step>
-    <name>Get rows from result</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>gem_bfs</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        </field>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>378</xloc>
-      <yloc>51</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
