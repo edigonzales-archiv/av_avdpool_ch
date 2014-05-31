@@ -12,4 +12,4 @@ java -jar ili2pg.jar --dbhost localhost --dbdatabase xanadu2 --dbusr stefan --db
 
 3D
 --
-Fixpunkte und Höhenkurven sind gemäss 3d. Anscheinend darf der Z-Wert eines Punktes in Postgis *nicht" NULL sein. Postgis macht (ST_Force_3d) daraus 0. 
+Fixpunkte und Höhenkurven sind gemäss Modell 3d. Anscheinend darf in Postgis der Z-Wert eines Punktes in Postgis *nicht* NULL sein. Falls keine Höhe vorhanden ist, wird sie auf 0 gesetzt (durch ST_Force_3d).

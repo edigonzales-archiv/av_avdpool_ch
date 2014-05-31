@@ -50,7 +50,7 @@
     <size_rowset>10000</size_rowset>
     <sleep_time_empty>50</sleep_time_empty>
     <sleep_time_full>50</sleep_time_full>
-    <unique_connections>N</unique_connections>
+    <unique_connections>Y</unique_connections>
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
     <using_thread_priorities>Y</using_thread_priorities>
@@ -226,7 +226,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
@@ -261,7 +261,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
@@ -297,12 +297,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__liegenschaftpos&#x28;liegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT grundstueckpos_von as liegenschaftpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        b.hali, b.vali, b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        b.hali_txt, b.vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3d; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.grundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__liegenschaftpos&#x28;liegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT grundstueckpos_von as liegenschaftpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        CASE &#xa;            WHEN b.hali IS NULL THEN 1&#xa;            ELSE b.hali&#xa;        END as hali,&#xa;        CASE &#xa;            WHEN b.vali IS NULL THEN 2&#xa;            ELSE b.vali&#xa;        END as vali,&#xa;b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        CASE &#xa;            WHEN b.hali_txt IS NULL THEN &#x27;Center&#x27;&#xa;            ELSE b.hali_txt&#xa;        END as hali_txt,&#xa;        CASE &#xa;            WHEN b.vali_txt IS NULL THEN &#x27;Half&#x27;&#xa;            ELSE b.vali_txt&#xa;        END as vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3d; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.grundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -332,7 +332,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
@@ -368,12 +368,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projliegenschaftpos&#x28;projliegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT projgrundstueckpos_von as projliegenschaftpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        b.hali, b.vali, b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        b.hali_txt, b.vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3d; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.projgrundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projliegenschaftpos&#x28;projliegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT projgrundstueckpos_von as projliegenschaftpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        CASE &#xa;            WHEN b.hali IS NULL THEN 1&#xa;            ELSE b.hali&#xa;        END as hali,&#xa;        CASE &#xa;            WHEN b.vali IS NULL THEN 2&#xa;            ELSE b.vali&#xa;        END as vali,&#xa;b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        CASE &#xa;            WHEN b.hali_txt IS NULL THEN &#x27;Center&#x27;&#xa;            ELSE b.hali_txt&#xa;        END as hali_txt,&#xa;        CASE &#xa;            WHEN b.vali_txt IS NULL THEN &#x27;Half&#x27;&#xa;            ELSE b.vali_txt&#xa;        END as vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3d; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.projgrundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -403,12 +403,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerk &#x28;tid, nbident, nummer, egris_egrid, vollstaendigkeit, grundstuecksart, flaechenmass, geometrie, stand_am, bfsnr&#x29;&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_projgrundstueck as a, av_avdpool_ch.liegenschaften_projselbstrecht as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.projselbstrecht_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#xa;   UNION&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_projgrundstueck as a, av_avdpool_ch.liegenschaften_projbergwerk as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.projbergwerk_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#x3b;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerk &#x28;tid, nbident, nummer, egris_egrid, vollstaendigkeit, grundstuecksart, flaechenmass, geometrie, stand_am, bfsnr&#x29;&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_projgrundstueck as a, av_avdpool_ch.liegenschaften_projselbstrecht as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.projselbstrecht_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#xa;   UNION ALL&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_projgrundstueck as a, av_avdpool_ch.liegenschaften_projbergwerk as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.projbergwerk_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -442,12 +442,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerkpos&#x28;selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT projgrundstueckpos_von as projselbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        b.hali, b.vali, b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        b.hali_txt, b.vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3e; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.projgrundstueckpos_von&#x3a;&#x3a;text&#x3b;&#xa;&#xa;&#xa;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerkpos&#x28;selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT projgrundstueckpos_von as projselbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        CASE &#xa;            WHEN b.hali IS NULL THEN 1&#xa;            ELSE b.hali&#xa;        END as hali,&#xa;        CASE &#xa;            WHEN b.vali IS NULL THEN 2&#xa;            ELSE b.vali&#xa;        END as vali,&#xa;b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        CASE &#xa;            WHEN b.hali_txt IS NULL THEN &#x27;Center&#x27;&#xa;            ELSE b.hali_txt&#xa;        END as hali_txt,&#xa;        CASE &#xa;            WHEN b.vali_txt IS NULL THEN &#x27;Half&#x27;&#xa;            ELSE b.vali_txt&#xa;        END as vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3e; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.projgrundstueckpos_von&#x3a;&#x3a;text&#x3b;&#xa;&#xa;&#xa;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -477,12 +477,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerk &#x28;tid, nbident, nummer, egris_egrid, vollstaendigkeit, grundstuecksart, flaechenmass, geometrie, stand_am, bfsnr&#x29;&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_grundstueck as a, av_avdpool_ch.liegenschaften_selbstrecht as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.selbstrecht_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#xa;   UNION&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_grundstueck as a, av_avdpool_ch.liegenschaften_bergwerk as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.bergwerk_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#x3b;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerk &#x28;tid, nbident, nummer, egris_egrid, vollstaendigkeit, grundstuecksart, flaechenmass, geometrie, stand_am, bfsnr&#x29;&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_grundstueck as a, av_avdpool_ch.liegenschaften_selbstrecht as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.selbstrecht_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#xa;   UNION ALL&#xa;SELECT a.tid as tid, a.nbident as nbident, a.nummer as nummer, a.egris_egrid as egris_egrid, c.designation_d as vollstaendigkeit, e.designation_d as grundstuecksart, b.flaechenmass as flaechenmass, b.geometrie as geometrie, &#xa; CASE &#xa;   WHEN d.gueltigereintrag IS NULL THEN to_date&#x28;d.datum1, &#x27;YYYYMMDD&#x27;&#x29;&#xa;   ELSE to_date&#x28;d.gueltigereintrag, &#x27;YYYYMMDD&#x27;&#x29;&#xa; END AS stand_am, &#xa; b.gem_bfs as bfsnr&#xa;FROM av_avdpool_ch.liegenschaften_lsnachfuehrung as d, av_avdpool_ch.liegenschaften_grundstueck as a, av_avdpool_ch.liegenschaften_bergwerk as b, av_mopublic_meta.completeness_type as c,av_mopublic_meta.realestate_type as e&#xa;WHERE a.gem_bfs &#x3d; &#x3f; AND b.gem_bfs &#x3d; &#x3f; AND d.gem_bfs &#x3d; &#x3f; &#xa;AND b.bergwerk_von &#x3d; a.tid&#xa;AND a.vollstaendigkeit &#x3d; c.code&#xa;AND d.tid &#x3d; a.entstehung&#xa;AND &#x28;a.art - 1&#x29; &#x3d; e.code&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -516,12 +516,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2_test</connection>
+    <connection>xanadu2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerkpos&#x28;selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT grundstueckpos_von as selbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        b.hali, b.vali, b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        b.hali_txt, b.vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3e; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.grundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
+    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr &#x3d; &#x3f;&#x3b;&#xa;&#xa;INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerkpos&#x28;selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt&#x29;&#xa;SELECT grundstueckpos_von as selbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,&#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 100&#x3a;&#x3a;double precision&#xa;            ELSE b.ori&#xa;        END AS ori, &#xa;        CASE &#xa;            WHEN b.hali IS NULL THEN 1&#xa;            ELSE b.hali&#xa;        END as hali,&#xa;        CASE &#xa;            WHEN b.vali IS NULL THEN 2&#xa;            ELSE b.vali&#xa;        END as vali,&#xa;b.gem_bfs AS bfsnr, ST_X&#x28;b.pos&#x29; AS y, ST_Y&#x28;b.pos&#x29; AS x, &#xa;        CASE&#xa;            WHEN b.ori IS NULL THEN 0&#x3a;&#x3a;double precision&#xa;            ELSE &#x28;100&#x3a;&#x3a;double precision - b.ori&#x29; &#x2a; 0.9&#x3a;&#x3a;double precision&#xa;        END AS rot, &#xa;        CASE &#xa;            WHEN b.hali_txt IS NULL THEN &#x27;Center&#x27;&#xa;            ELSE b.hali_txt&#xa;        END as hali_txt,&#xa;        CASE &#xa;            WHEN b.vali_txt IS NULL THEN &#x27;Half&#x27;&#xa;            ELSE b.vali_txt&#xa;        END as vali_txt&#xa;FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b&#xa;WHERE a.gem_bfs &#x3d; &#x3f; &#xa;AND b.gem_bfs &#x3d; &#x3f;&#xa;AND a.art &#x3e; 0&#xa;AND a.tid&#x3a;&#x3a;text &#x3d; b.grundstueckpos_von&#x3a;&#x3a;text&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
