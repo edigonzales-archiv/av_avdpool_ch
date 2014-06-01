@@ -253,7 +253,7 @@ DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr = ?;</sql>
            <schema_name/>
            </partitioning>
     <fields>      <field>        <name>gem_bfs</name>
-        <type>Number</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         </field>      </fields>     <cluster_schema/>
@@ -275,7 +275,7 @@ DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr = ?;</sql>
            <schema_name/>
            </partitioning>
     <fields>      <field>        <name>gem_bfs</name>
-        <type>Number</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         </field>      </fields>     <cluster_schema/>
@@ -349,10 +349,6 @@ WHERE bfsnr = ?;</sql>
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>ogc_fid</column_name>
-          <stream_name>ogc_fid</stream_name>
-        </field>
         <field>
           <column_name>tid</column_name>
           <stream_name>tid</stream_name>
@@ -460,10 +456,6 @@ WHERE bfsnr = ?;</sql>
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>ogc_fid</column_name>
-          <stream_name>ogc_fid</stream_name>
-        </field>
         <field>
           <column_name>tid</column_name>
           <stream_name>tid</stream_name>

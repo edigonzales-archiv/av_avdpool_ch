@@ -105,6 +105,7 @@ CREATE INDEX idx_liegenschaften__liegenschaft_tid
 CREATE TABLE av_mopublic.liegenschaften__liegenschaftpos
 (
   ogc_fid serial NOT NULL,
+  tid character varying,
   liegenschaftpos_von character varying,
   nbident character varying,
   nummer character varying,
@@ -142,6 +143,11 @@ CREATE INDEX idx_liegenschaften__liegenschaftpos_ogc_fid
   ON av_mopublic.liegenschaften__liegenschaftpos
   USING btree
   (ogc_fid);
+  
+CREATE INDEX idx_liegenschaften__liegenschaftpos_tid
+  ON av_mopublic.liegenschaften__liegenschaftpos
+  USING btree
+  (tid);
 
 CREATE INDEX idx_liegenschaften__liegenschaftpos_pos
   ON av_mopublic.liegenschaften__liegenschaftpos
@@ -219,6 +225,7 @@ CREATE INDEX idx_liegenschaften__selbstrecht_bergwerk_tid
 CREATE TABLE av_mopublic.liegenschaften__selbstrecht_bergwerkpos
 (
   ogc_fid serial NOT NULL,
+  tid character varying,
   selbstrecht_bergwerkpos_von character varying,
   nbident character varying,
   nummer character varying,
@@ -256,6 +263,11 @@ CREATE INDEX idx_liegenschaften__selbstrecht_bergwerkpos_ogc_fid
   ON av_mopublic.liegenschaften__selbstrecht_bergwerkpos
   USING btree
   (ogc_fid);
+
+CREATE INDEX idx_liegenschaften__selbstrecht_bergwerkpos_tid
+  ON av_mopublic.liegenschaften__selbstrecht_bergwerkpos
+  USING btree
+  (tid);
 
 CREATE INDEX idx_liegenschaften__selbstrecht_bergwerkpos_pos
   ON av_mopublic.liegenschaften__selbstrecht_bergwerkpos
@@ -328,6 +340,7 @@ CREATE INDEX idx_liegenschaften__projliegenschaft_tid
 CREATE TABLE av_mopublic.liegenschaften__projliegenschaftpos
 (
   ogc_fid serial NOT NULL,
+  tid character varying,
   projliegenschaftpos_von character varying,
   nbident character varying,
   nummer character varying,
@@ -365,6 +378,12 @@ CREATE INDEX idx_liegenschaften__projliegenschaftpos_ogc_fid
   ON av_mopublic.liegenschaften__projliegenschaftpos
   USING btree
   (ogc_fid);
+  
+CREATE INDEX idx_liegenschaften__projliegenschaftpos_tid
+  ON av_mopublic.liegenschaften__projliegenschaftpos
+  USING btree
+  (tid);
+
 
 CREATE INDEX idx_liegenschaften__projliegenschaftpos_pos
   ON av_mopublic.liegenschaften__projliegenschaftpos
@@ -443,6 +462,7 @@ CREATE INDEX idx_liegenschaften__projselbstrecht_bergwerk_tid
 CREATE TABLE av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
 (
   ogc_fid serial NOT NULL,
+  tid character varying,
   selbstrecht_bergwerkpos_von character varying,
   nbident character varying,
   nummer character varying,
@@ -480,6 +500,11 @@ CREATE INDEX idx_liegenschaften__projselbstrecht_bergwerkpos_ogc_fid
   ON av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
   USING btree
   (ogc_fid);
+  
+CREATE INDEX idx_liegenschaften__projselbstrecht_bergwerkpos_tid
+  ON av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
+  USING btree
+  (tid);
 
 CREATE INDEX idx_liegenschaften__projselbstrecht_bergwerkpos_pos
   ON av_mopublic.liegenschaften__projselbstrecht_bergwerkpos

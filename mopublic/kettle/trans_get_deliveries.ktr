@@ -198,8 +198,9 @@
     <connection>xanadu2</connection>
     <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
 FROM av_avdpool_ch.gemeindegrenzen_gemeinde
---WHERE lieferdatum = current_date
---LIMIT 2
+--WHERE gem_bfs = 2553
+WHERE lieferdatum = current_date
+--LIMIT 5
 
  
 --SELECT DISTINCT fosnr as gem_bfs

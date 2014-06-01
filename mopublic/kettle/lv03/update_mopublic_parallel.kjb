@@ -148,7 +148,7 @@
       <minutes>0</minutes>
       <weekDay>1</weekDay>
       <DayOfMonth>1</DayOfMonth>
-      <parallel>Y</parallel>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
@@ -265,7 +265,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>295</xloc>
+      <xloc>296</xloc>
       <yloc>216</yloc>
       </entry>
     <entry>
