@@ -97,7 +97,7 @@ public class IliReader {
 
     public IliReader(String itf, String epsg, HashMap params) throws IllegalArgumentException, IOException, ClassNotFoundException, SQLException, Exception 
     {
-    	logger.setLevel(Level.DEBUG);
+    	logger.setLevel(Level.INFO);
 
     	// get parameters
     	this.params = params;
