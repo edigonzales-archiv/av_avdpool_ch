@@ -97,7 +97,7 @@ public class IliReader {
 
     public IliReader(String itf, String epsg, HashMap params) throws IllegalArgumentException, IOException, ClassNotFoundException, SQLException, Exception 
     {
-    	logger.setLevel(Level.INFO);
+    	logger.setLevel(Level.DEBUG);
 
     	// get parameters
     	this.params = params;
@@ -537,6 +537,7 @@ public class IliReader {
     private void writeToPostgis() throws IOException
     {
     	logger.debug("writeToPostgis (Geknorze.....)");
+    	logger.debug("featureName:: "+ featureName);
 		if ( isAreaHelper == true ) 
 		{
 			areaHelperFeatures.addAll( features );
@@ -633,14 +634,18 @@ public class IliReader {
 			// wird isSurfaceHelper nie true, somit
 			// gibts die surfaceMainCollection immer noch und
 			// sie muss noch in die DB geschrieben werden.
-//			System.out.println("*1");
+
+			// 2014-06-01: Anscheinend ja. Ich blicke zwar momentan nicht mehr durch in dem Geheue. Aber so funktionierts wieder 
+			// (war auskommentiert).
+			
 			if ( surfaceMainFeatures != null ) 
 			{ 
 				if ( surfaceMainFeatures.size() > 0 ) 
 				{
-//					System.out.println("*2");				
-					//this.writeToPostgis(surfaceMainCollection, surfaceMainFeatureName);
-					//surfaceMainCollection.clear();
+					logger.debug("writeToPostgis (letzte Surface Tabelle ohne Geometrie): " + surfaceMainFeatureName);
+		            SimpleFeatureCollection surfaceMainCollection = DataUtilities.collection( surfaceMainFeatures );
+					this.writeToPostgis(surfaceMainCollection, surfaceMainFeatureName);
+					surfaceMainFeatures.clear();
 				}
 			}
 		}
@@ -760,7 +765,7 @@ public class IliReader {
     private void compileModel() throws Ili2cException
     {
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{ "http://www.catais.ch/models/", "http://models.geo.admin.ch/" };
+    	String repositories[] = new String[]{ "http://www.catais.org/models/", "http://models.geo.admin.ch/" };
     	manager.setRepositories( repositories );
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(this.modelName);

@@ -1,58 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<transformation>
-  <info>
-    <name>trans_get_deliveries</name>
+<job>
+  <name>job_update_ownership</name>
     <description/>
     <extended_description/>
-    <trans_version/>
-    <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <job_version/>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2014&#47;06&#47;01 15:53:25.655</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#47;06&#47;01 15:53:25.655</modified_date>
     <parameters>
     </parameters>
-    <log>
-      <read/>
-      <write/>
-      <input/>
-      <output/>
-      <update/>
-      <rejected/>
-      <connection/>
-      <table/>
-      <step_performance_table/>
-      <use_batchid>N</use_batchid>
-      <use_logfield>N</use_logfield>
-      <size_limit_lines/>
-    </log>
-    <maxdate>
-      <connection/>
-      <table/>
-      <field/>
-      <offset>0.0</offset>
-      <maxdiff>0.0</maxdiff>
-    </maxdate>
-    <size_rowset>10000</size_rowset>
-    <sleep_time_empty>50</sleep_time_empty>
-    <sleep_time_full>50</sleep_time_full>
-    <unique_connections>N</unique_connections>
-    <feedback_shown>Y</feedback_shown>
-    <feedback_size>50000</feedback_size>
-    <using_thread_priorities>Y</using_thread_priorities>
-    <shared_objects_file/>
-    <capture_step_performance>N</capture_step_performance>
-    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
-    <dependencies>
-    </dependencies>
-    <partitionschemas>
-    </partitionschemas>
-    <slaveservers>
-    </slaveservers>
-    <clusterschemas>
-    </clusterschemas>
-  <modified_user>-</modified_user>
-  <modified_date>2013&#47;08&#47;17 18:15:48.685</modified_date>
-  </info>
-  <notepads>
-  </notepads>
   <connection>
     <name>rosebud2</name>
     <server>localhost</server>
@@ -165,63 +123,141 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
-  <order>
-  <hop> <from>Get deliveries</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>  </order>
-  <step>
-    <name>Copy rows to result</name>
-    <type>RowsToResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>489</xloc>
-      <yloc>153</yloc>
+    <slaveservers>
+    </slaveservers>
+  <logconnection/>
+  <logtable/>
+  <size_limit_lines/>
+   <use_batchid>Y</use_batchid>
+   <pass_batchid>N</pass_batchid>
+   <use_logfield>Y</use_logfield>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description>Special entries</description>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Get deliveries</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>xanadu2</connection>
-    <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
-FROM av_avdpool_ch.gemeindegrenzen_gemeinde
---WHERE lieferdatum = current_date
---LIMIT 2
-
- 
---SELECT DISTINCT fosnr as gem_bfs
---FROM delivery
---WHERE date(datetime(import_date &#47; 1000, &apos;unixepoch&apos;)) = strftime(date(&apos;NOW&apos;, &apos;-3 day&apos;))
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>302</xloc>
-      <yloc>153</yloc>
+      <nr>0</nr>
+      <xloc>133</xloc>
+      <yloc>245</yloc>
+      </entry>
+    <entry>
+      <name>Success 1</name>
+      <description>Success</description>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step_error_handling>
-  </step_error_handling>
-   <slave-step-copy-partition-distribution>
-</slave-step-copy-partition-distribution>
-   <slave_transformation>N</slave_transformation>
-</transformation>
+      <nr>0</nr>
+      <xloc>874</xloc>
+      <yloc>246</yloc>
+      </entry>
+    <entry>
+      <name>Deliveries</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;..&#47;trans_get_deliveries.ktr</filename>
+      <transname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>333</xloc>
+      <yloc>248</yloc>
+      </entry>
+    <entry>
+      <name>trans_update_ownership</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;trans_update_ownership.ktr</filename>
+      <transname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>557</xloc>
+      <yloc>241</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>START</from>
+      <to>Deliveries</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Deliveries</from>
+      <to>trans_update_ownership</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>trans_update_ownership</from>
+      <to>Success 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+    <notepad>
+      <note>LV95</note>
+      <xloc>123</xloc>
+      <yloc>70</yloc>
+      <width>36</width>
+      <heigth>23</heigth>
+    </notepad>
+  </notepads>
+</job>

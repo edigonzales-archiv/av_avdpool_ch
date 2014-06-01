@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>job_lv95_update_control_points</name>
+  <name>job_update_metadata</name>
     <description/>
     <extended_description/>
     <job_version/>
   <directory>&#47;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#47;05&#47;31 19:40:05.622</created_date>
+  <created_date>2013&#47;08&#47;17 22:25:57.252</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;05&#47;31 19:40:05.622</modified_date>
+  <modified_date>2013&#47;08&#47;17 22:25:57.252</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -39,6 +39,28 @@
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>rosebud2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>strelnikow</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>strelnikow</database>
     <port>5432</port>
     <username>stefan</username>
     <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
@@ -128,8 +150,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>164</xloc>
-      <yloc>182</yloc>
+      <xloc>258</xloc>
+      <yloc>109</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -138,14 +160,14 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>843</xloc>
-      <yloc>179</yloc>
+      <xloc>623</xloc>
+      <yloc>104</yloc>
       </entry>
     <entry>
-      <name>Deliveries</name>
+      <name>Metadata</name>
       <description/>
       <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;trans_get_deliveries.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}&#47;trans_update_metadata.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -166,42 +188,14 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>372</xloc>
-      <yloc>181</yloc>
-      </entry>
-    <entry>
-      <name>LV95 Control Points</name>
-      <description/>
-      <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;trans_lv95_update_control_points.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>583</xloc>
-      <yloc>180</yloc>
+      <xloc>447</xloc>
+      <yloc>109</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>Deliveries</to>
+      <to>Metadata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -209,16 +203,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Deliveries</from>
-      <to>LV95 Control Points</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>LV95 Control Points</from>
+      <from>Metadata</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -228,5 +213,12 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>LV95</note>
+      <xloc>46</xloc>
+      <yloc>33</yloc>
+      <width>36</width>
+      <heigth>23</heigth>
+    </notepad>
   </notepads>
 </job>

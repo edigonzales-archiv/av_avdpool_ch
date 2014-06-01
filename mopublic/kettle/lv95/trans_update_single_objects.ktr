@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>trans_update_single_objects</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_status>0</trans_status>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <read/>
+      <write/>
+      <input/>
+      <output/>
+      <update/>
+      <rejected/>
+      <connection/>
+      <table/>
+      <step_performance_table/>
+      <use_batchid>Y</use_batchid>
+      <use_logfield>N</use_logfield>
+      <size_limit_lines/>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>Y</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#47;06&#47;01 15:01:06.794</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>rosebud2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>mspublic</username>
+    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>srsofaioi4531</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>strelnikow</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>strelnikow</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>xanadu2</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>xanadu2</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>xanadu2_test</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>xanadu2_test</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Delete Single Objects</from><to>Get rows from result 2</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 1</from><to>Delete Single Objects</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Flaechenelement</to><enabled>Y</enabled> </hop>  <hop> <from>Flaechenelement</from><to>FreeFrame Plugin</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Flaechenelement LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>FlaechenelementText</to><enabled>Y</enabled> </hop>  <hop> <from>FlaechenelementText</from><to>FreeFrame Plugin 2</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 2</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>FlaechenelementText LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Linienelement</to><enabled>Y</enabled> </hop>  <hop> <from>Linienelement</from><to>FreeFrame Plugin 3</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 3</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>Linienelement LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>LinienelementText</to><enabled>Y</enabled> </hop>  <hop> <from>LinienelementText</from><to>FreeFrame Plugin 4</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 4</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>LinienelementText LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Punktelement</to><enabled>Y</enabled> </hop>  <hop> <from>Punktelement</from><to>FreeFrame Plugin 5</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 5</from><to>Set SRS 5</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 5</from><to>Punktelement LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>PunktelementText</to><enabled>Y</enabled> </hop>  <hop> <from>PunktelementText</from><to>FreeFrame Plugin 6</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 6</from><to>Set SRS 6</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 6</from><to>PunktelementText LV95</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Delete Single Objects</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelement WHERE bfsnr = ?;
+DELETE FROM av_mopublic.einzelobjekte__flaechenelementtext WHERE bfsnr = ?;
+DELETE FROM av_mopublic.einzelobjekte__linienelement WHERE bfsnr = ?;
+DELETE FROM av_mopublic.einzelobjekte__linienelementtext WHERE bfsnr = ?;
+DELETE FROM av_mopublic.einzelobjekte__punktelement WHERE bfsnr = ?;
+DELETE FROM av_mopublic.einzelobjekte__punktelementtext WHERE bfsnr = ?;
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>417</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result 1</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>gem_bfs</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>415</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result 2</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>gem_bfs</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>420</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Flaechenelement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, gueltigkeit
+, art
+, geometrie
+, qualitaetsstandard
+, gwr_egid
+, stand_am
+, bfsnr
+FROM av_mopublic.einzelobjekte__flaechenelement
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>Y</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>97</xloc>
+      <yloc>350</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>geometrie</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>99</xloc>
+      <yloc>465</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>geometrie</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>100</xloc>
+      <yloc>581</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Flaechenelement LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__flaechenelement</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>gueltigkeit</column_name>
+          <stream_name>gueltigkeit</stream_name>
+        </field>
+        <field>
+          <column_name>art</column_name>
+          <stream_name>art</stream_name>
+        </field>
+        <field>
+          <column_name>geometrie</column_name>
+          <stream_name>geometrie</stream_name>
+        </field>
+        <field>
+          <column_name>qualitaetsstandard</column_name>
+          <stream_name>qualitaetsstandard</stream_name>
+        </field>
+        <field>
+          <column_name>gwr_egid</column_name>
+          <stream_name>gwr_egid</stream_name>
+        </field>
+        <field>
+          <column_name>stand_am</column_name>
+          <stream_name>stand_am</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>90</xloc>
+      <yloc>691</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FlaechenelementText LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__flaechenelementtext</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>flaechenelementtext_von</column_name>
+          <stream_name>flaechenelementtext_von</stream_name>
+        </field>
+        <field>
+          <column_name>typ</column_name>
+          <stream_name>typ</stream_name>
+        </field>
+        <field>
+          <column_name>nummer_name</column_name>
+          <stream_name>nummer_name</stream_name>
+        </field>
+        <field>
+          <column_name>pos</column_name>
+          <stream_name>pos</stream_name>
+        </field>
+        <field>
+          <column_name>ori</column_name>
+          <stream_name>ori</stream_name>
+        </field>
+        <field>
+          <column_name>hali</column_name>
+          <stream_name>hali</stream_name>
+        </field>
+        <field>
+          <column_name>vali</column_name>
+          <stream_name>vali</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+        <field>
+          <column_name>y</column_name>
+          <stream_name>y</stream_name>
+        </field>
+        <field>
+          <column_name>x</column_name>
+          <stream_name>x</stream_name>
+        </field>
+        <field>
+          <column_name>rot</column_name>
+          <stream_name>rot</stream_name>
+        </field>
+        <field>
+          <column_name>hali_txt</column_name>
+          <stream_name>hali_txt</stream_name>
+        </field>
+        <field>
+          <column_name>vali_txt</column_name>
+          <stream_name>vali_txt</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>246</xloc>
+      <yloc>692</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FlaechenelementText</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, flaechenelementtext_von
+, typ
+, nummer_name
+, pos
+, ori
+, hali
+, vali
+, bfsnr
+, y
+, x
+, rot
+, hali_txt
+, vali_txt
+FROM av_mopublic.einzelobjekte__flaechenelementtext
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin 2</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>pos</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>252</xloc>
+      <yloc>467</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS 2</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>pos</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>244</xloc>
+      <yloc>571</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS 3</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>geometrie</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>392</xloc>
+      <yloc>572</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Linienelement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, gueltigkeit
+, art
+, geometrie
+, qualitaetsstandard
+, gwr_egid
+, stand_am
+, bfsnr
+FROM av_mopublic.einzelobjekte__linienelement
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>380</xloc>
+      <yloc>354</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Linienelement LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__linienelement</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>gueltigkeit</column_name>
+          <stream_name>gueltigkeit</stream_name>
+        </field>
+        <field>
+          <column_name>art</column_name>
+          <stream_name>art</stream_name>
+        </field>
+        <field>
+          <column_name>geometrie</column_name>
+          <stream_name>geometrie</stream_name>
+        </field>
+        <field>
+          <column_name>qualitaetsstandard</column_name>
+          <stream_name>qualitaetsstandard</stream_name>
+        </field>
+        <field>
+          <column_name>gwr_egid</column_name>
+          <stream_name>gwr_egid</stream_name>
+        </field>
+        <field>
+          <column_name>stand_am</column_name>
+          <stream_name>stand_am</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>394</xloc>
+      <yloc>692</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin 3</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>geometrie</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>388</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin 4</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>pos</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>505</xloc>
+      <yloc>465</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS 4</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>pos</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>507</xloc>
+      <yloc>573</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LinienelementText</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, linienelementtext_von
+, typ
+, nummer_name
+, pos
+, ori
+, hali
+, vali
+, bfsnr
+, y
+, x
+, rot
+, hali_txt
+, vali_txt
+FROM av_mopublic.einzelobjekte__linienelementtext
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>483</xloc>
+      <yloc>354</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LinienelementText LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__linienelementtext</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>linienelementtext_von</column_name>
+          <stream_name>linienelementtext_von</stream_name>
+        </field>
+        <field>
+          <column_name>typ</column_name>
+          <stream_name>typ</stream_name>
+        </field>
+        <field>
+          <column_name>nummer_name</column_name>
+          <stream_name>nummer_name</stream_name>
+        </field>
+        <field>
+          <column_name>pos</column_name>
+          <stream_name>pos</stream_name>
+        </field>
+        <field>
+          <column_name>ori</column_name>
+          <stream_name>ori</stream_name>
+        </field>
+        <field>
+          <column_name>hali</column_name>
+          <stream_name>hali</stream_name>
+        </field>
+        <field>
+          <column_name>vali</column_name>
+          <stream_name>vali</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+        <field>
+          <column_name>y</column_name>
+          <stream_name>y</stream_name>
+        </field>
+        <field>
+          <column_name>x</column_name>
+          <stream_name>x</stream_name>
+        </field>
+        <field>
+          <column_name>rot</column_name>
+          <stream_name>rot</stream_name>
+        </field>
+        <field>
+          <column_name>hali_txt</column_name>
+          <stream_name>hali_txt</stream_name>
+        </field>
+        <field>
+          <column_name>vali_txt</column_name>
+          <stream_name>vali_txt</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>517</xloc>
+      <yloc>692</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Punktelement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>xanadu2</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, gueltigkeit
+, art
+, geometrie
+, qualitaetsstandard
+, gwr_egid
+, stand_am
+, bfsnr
+FROM av_mopublic.einzelobjekte__punktelement
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>631</xloc>
+      <yloc>353</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Punktelement LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__punktelement</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>gueltigkeit</column_name>
+          <stream_name>gueltigkeit</stream_name>
+        </field>
+        <field>
+          <column_name>art</column_name>
+          <stream_name>art</stream_name>
+        </field>
+        <field>
+          <column_name>geometrie</column_name>
+          <stream_name>geometrie</stream_name>
+        </field>
+        <field>
+          <column_name>qualitaetsstandard</column_name>
+          <stream_name>qualitaetsstandard</stream_name>
+        </field>
+        <field>
+          <column_name>gwr_egid</column_name>
+          <stream_name>gwr_egid</stream_name>
+        </field>
+        <field>
+          <column_name>stand_am</column_name>
+          <stream_name>stand_am</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>644</xloc>
+      <yloc>691</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS 5</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>geometrie</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>644</xloc>
+      <yloc>580</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin 5</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>geometrie</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>641</xloc>
+      <yloc>459</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PunktelementText</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <sql>SELECT
+  ogc_fid
+, tid
+, punktelementtext_von
+, typ
+, nummer_name
+, pos
+, ori
+, hali
+, vali
+, bfsnr
+, y
+, x
+, rot
+, hali_txt
+, vali_txt
+FROM av_mopublic.einzelobjekte__punktelementtext
+WHERE bfsnr = ?;</sql>
+    <limit>0</limit>
+    <lookup>Get rows from result 2</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>778</xloc>
+      <yloc>353</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PunktelementText LV95</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <schema>av_mopublic</schema>
+    <table>einzelobjekte__punktelementtext</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>ogc_fid</column_name>
+          <stream_name>ogc_fid</stream_name>
+        </field>
+        <field>
+          <column_name>tid</column_name>
+          <stream_name>tid</stream_name>
+        </field>
+        <field>
+          <column_name>punktelementtext_von</column_name>
+          <stream_name>punktelementtext_von</stream_name>
+        </field>
+        <field>
+          <column_name>typ</column_name>
+          <stream_name>typ</stream_name>
+        </field>
+        <field>
+          <column_name>nummer_name</column_name>
+          <stream_name>nummer_name</stream_name>
+        </field>
+        <field>
+          <column_name>pos</column_name>
+          <stream_name>pos</stream_name>
+        </field>
+        <field>
+          <column_name>ori</column_name>
+          <stream_name>ori</stream_name>
+        </field>
+        <field>
+          <column_name>hali</column_name>
+          <stream_name>hali</stream_name>
+        </field>
+        <field>
+          <column_name>vali</column_name>
+          <stream_name>vali</stream_name>
+        </field>
+        <field>
+          <column_name>bfsnr</column_name>
+          <stream_name>bfsnr</stream_name>
+        </field>
+        <field>
+          <column_name>y</column_name>
+          <stream_name>y</stream_name>
+        </field>
+        <field>
+          <column_name>x</column_name>
+          <stream_name>x</stream_name>
+        </field>
+        <field>
+          <column_name>rot</column_name>
+          <stream_name>rot</stream_name>
+        </field>
+        <field>
+          <column_name>hali_txt</column_name>
+          <stream_name>hali_txt</stream_name>
+        </field>
+        <field>
+          <column_name>vali_txt</column_name>
+          <stream_name>vali_txt</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>794</xloc>
+      <yloc>690</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set SRS 6</name>
+    <type>SetSRS</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<field_name>pos</field_name>
+<actual_gui_status>1</actual_gui_status>
+    <selected_srs>
+<authority>EPSG</authority>
+<srid>2056</srid>
+<description>CH1903+ &#47; LV95</description>
+<is_custom>N</is_custom>
+    </selected_srs>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>792</xloc>
+      <yloc>587</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FreeFrame Plugin 6</name>
+    <type>FreeFrame</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+		<fieldname>pos</fieldname>
+		<source_frame>LV03</source_frame>
+		<target_frame>LV95</target_frame>
+		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>785</xloc>
+      <yloc>458</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>
