@@ -166,7 +166,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Delete Territorial Boundaries</from><to>Get rows from result 2</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 1</from><to>Delete Territorial Boundaries</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Gemeindegrenze</to><enabled>Y</enabled> </hop>  <hop> <from>Gemeindegrenze</from><to>FreeFrame Plugin</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Gemeindegrenze LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Hoheitsgrenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>Hoheitsgrenzpunkt</from><to>FreeFrame Plugin 2</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 2</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>Hoheitsgrenzpunkt LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>ProjGemeindegrenze</to><enabled>Y</enabled> </hop>  <hop> <from>ProjGemeindegrenze</from><to>FreeFrame Plugin 3</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 3</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>ProjGemeindegrenze LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Uebrige Hoheitsgrenzen</to><enabled>Y</enabled> </hop>  <hop> <from>Uebrige Hoheitsgrenzen</from><to>FreeFrame Plugin 4</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 4</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>Uebrige Hoheitsgrenzen LV95</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Gemeindegrenze</from><to>FreeFrame Plugin</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Gemeindegrenze LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Hoheitsgrenzpunkt</from><to>FreeFrame Plugin 2</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 2</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>Hoheitsgrenzpunkt LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjGemeindegrenze</from><to>FreeFrame Plugin 3</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 3</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>ProjGemeindegrenze LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Uebrige Hoheitsgrenzen</from><to>FreeFrame Plugin 4</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 4</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>Uebrige Hoheitsgrenzen LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Delete Territorial Boundaries</from><to>Gemeindegrenze</to><enabled>Y</enabled> </hop>  <hop> <from>Delete Territorial Boundaries 2</from><to>Hoheitsgrenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>Delete Territorial Boundaries 3</from><to>ProjGemeindegrenze</to><enabled>Y</enabled> </hop>  <hop> <from>Delete Territorial Boundaries 4</from><to>Uebrige Hoheitsgrenzen</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Delete Territorial Boundaries</name>
     <type>ExecSQL</type>
@@ -178,27 +178,20 @@
            <schema_name/>
            </partitioning>
     <connection>strelnikow</connection>
-    <execute_each_row>Y</execute_each_row>
+    <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.hoheitsgrenzen__gemeindegrenze WHERE bfsnr = ?;
-DELETE FROM av_mopublic.hoheitsgrenzen__hoheitsgrenzpunkt WHERE bfsnr = ?;
-DELETE FROM av_mopublic.hoheitsgrenzen__projgemeindegrenze WHERE bfsnr = ?;
-DELETE FROM av_mopublic.hoheitsgrenzen__uebrigehoheitsgrenzen WHERE bfsnr = ?;
+    <sql>DELETE FROM av_mopublic.hoheitsgrenzen__gemeindegrenze WHERE bfsnr IN ${GEM_BFS};
 </sql>
     <insert_field/>
     <update_field/>
     <delete_field/>
     <read_field/>
     <arguments>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>452</xloc>
-      <yloc>178</yloc>
+      <xloc>143</xloc>
+      <yloc>258</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -310,9 +303,9 @@ DELETE FROM av_mopublic.hoheitsgrenzen__uebrigehoheitsgrenzen WHERE bfsnr = ?;
 , stand_am
 , bfsnr
 FROM av_mopublic.hoheitsgrenzen__gemeindegrenze
-WHERE bfsnr = ?;</sql>
+WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
-    <lookup>Get rows from result 2</lookup>
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>Y</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
@@ -382,42 +375,6 @@ WHERE bfsnr = ?;</sql>
     </step>
 
   <step>
-    <name>Get rows from result 1</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>450</xloc>
-      <yloc>77</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Get rows from result 2</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>456</xloc>
-      <yloc>284</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Hoheitsgrenzpunkt</name>
     <type>TableInput</type>
     <description/>
@@ -439,9 +396,9 @@ WHERE bfsnr = ?;</sql>
 , stand_am
 , bfsnr
 FROM av_mopublic.hoheitsgrenzen__hoheitsgrenzpunkt
-WHERE bfsnr = ?;</sql>
+WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
-    <lookup>Get rows from result 2</lookup>
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>Y</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
@@ -541,9 +498,9 @@ WHERE bfsnr = ?;</sql>
 , stand_am
 , bfsnr
 FROM av_mopublic.hoheitsgrenzen__projgemeindegrenze
-WHERE bfsnr = ?;</sql>
+WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
-    <lookup>Get rows from result 2</lookup>
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>Y</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
@@ -735,9 +692,9 @@ WHERE bfsnr = ?;</sql>
 , gueltigkeit
 , bfsnr
 FROM av_mopublic.hoheitsgrenzen__uebrigehoheitsgrenzen
-WHERE bfsnr = ?;</sql>
+WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
-    <lookup>Get rows from result 2</lookup>
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>Y</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
@@ -802,6 +759,93 @@ WHERE bfsnr = ?;</sql>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>679</xloc>
       <yloc>764</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete Territorial Boundaries 2</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.hoheitsgrenzen__hoheitsgrenzpunkt WHERE bfsnr IN ${GEM_BFS};
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>304</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete Territorial Boundaries 3</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.hoheitsgrenzen__projgemeindegrenze WHERE bfsnr IN ${GEM_BFS};
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>497</xloc>
+      <yloc>266</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete Territorial Boundaries 4</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.hoheitsgrenzen__uebrigehoheitsgrenzen WHERE bfsnr IN ${GEM_BFS};
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>670</xloc>
+      <yloc>287</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

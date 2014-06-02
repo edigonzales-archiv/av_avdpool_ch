@@ -150,8 +150,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>706</xloc>
-      <yloc>16</yloc>
+      <xloc>230</xloc>
+      <yloc>62</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -160,8 +160,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>764</xloc>
-      <yloc>601</yloc>
+      <xloc>1076</xloc>
+      <yloc>57</yloc>
       </entry>
     <entry>
       <name>job_update_control_points</name>
@@ -468,8 +468,8 @@
 
 Exception in thread &quot;FreeFrame Plugin 5.0 (Thread-5991)&quot; 
 java.lang.OutOfMemoryError: Java heap space</note>
-      <xloc>46</xloc>
-      <yloc>103</yloc>
+      <xloc>25</xloc>
+      <yloc>417</yloc>
       <width>326</width>
       <heigth>62</heigth>
     </notepad>

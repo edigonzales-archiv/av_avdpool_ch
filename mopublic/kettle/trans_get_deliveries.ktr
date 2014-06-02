@@ -166,25 +166,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get deliveries</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>  </order>
-  <step>
-    <name>Copy rows to result</name>
-    <type>RowsToResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>489</xloc>
-      <yloc>153</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
+  <hop> <from>Get deliveries</from><to>Set Variables</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Get deliveries</name>
     <type>TableInput</type>
@@ -196,8 +178,16 @@
            <schema_name/>
            </partitioning>
     <connection>xanadu2</connection>
-    <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
-FROM av_avdpool_ch.gemeindegrenzen_gemeinde
+    <sql>SELECT &apos;(&apos; || array_to_string(array_agg(gem_bfs), &apos;, &apos;) || &apos;)&apos; as gem_bfs
+FROM
+(
+ SELECT gem_bfs
+ FROM av_avdpool_ch.gemeindegrenzen_gemeinde
+ --LIMIT 3
+) as a
+
+--SELECT DISTINCT ON (gem_bfs) gem_bfs
+--FROM av_avdpool_ch.gemeindegrenzen_gemeinde
 --WHERE gem_bfs = 2427
 --WHERE lieferdatum = current_date
 --LIMIT 5
@@ -216,6 +206,33 @@ FROM av_avdpool_ch.gemeindegrenzen_gemeinde
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>302</xloc>
       <yloc>153</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set Variables</name>
+    <type>SetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <field_name>gem_bfs</field_name>
+        <variable_name>GEM_BFS</variable_name>
+        <variable_type>PARENT_JOB</variable_type>
+        <default_value>(9999)</default_value>
+        </field>
+      </fields>
+    <use_formatting>Y</use_formatting>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>440</xloc>
+      <yloc>155</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
