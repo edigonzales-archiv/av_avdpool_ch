@@ -168,6 +168,258 @@
   <order>
   <hop> <from>Grenzpunkt</from><to>FreeFrame Grenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Grenzpunkt</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Grenzpunkt LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Liegenschaft</from><to>FreeFrame Liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Liegenschaft</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>Liegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>LiegenschaftPos</from><to>FreeFrame LiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame LiegenschaftPos</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>LiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaft</from><to>FreeFrame ProjLiegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjLiegenschaft</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>ProjLiegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaftPos</from><to>FreeFrame ProjLiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjLiegenschaftPos</from><to>Set SRS 5</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 5</from><to>ProjLiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Bergwerk</from><to>FreeFrame SelbstRecht_Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame SelbstRecht_Bergwerk</from><to>Set SRS 6</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 6</from><to>SelbstRecht Berwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Berwerk Pos</from><to>FreeFrame SelbstRecht_BergwerkPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame SelbstRecht_BergwerkPos</from><to>Set SRS 7</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 7</from><to>SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk</from><to>FreeFrame ProjSelbstRecht_Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjSelbstRecht_Bergwerk</from><to>Set SRS 8</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 8</from><to>Proj SelbstRecht Bergwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk Pos</from><to>FreeFrame ProjSelbstRecht_BergwerkPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjSelbstRecht_BergwerkPos</from><to>Set SRS 9</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 9</from><to>Proj SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script</from><to>Grenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 2</from><to>Liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 3</from><to>LiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 4</from><to>ProjLiegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 5</from><to>ProjLiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 6</from><to>SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 7</from><to>SelbstRecht Berwerk Pos</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 8</from><to>Proj SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Execute SQL script 9</from><to>Proj SelbstRecht Bergwerk Pos</to><enabled>Y</enabled> </hop>  </order>
   <step>
+    <name>Execute SQL script</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__grenzpunkt WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>41</xloc>
+      <yloc>271</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 2</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>189</xloc>
+      <yloc>269</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 3</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>352</xloc>
+      <yloc>273</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 4</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>492</xloc>
+      <yloc>278</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 5</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>642</xloc>
+      <yloc>289</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 6</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>786</xloc>
+      <yloc>279</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 7</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>952</xloc>
+      <yloc>286</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 8</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1111</xloc>
+      <yloc>301</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script 9</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>strelnikow</connection>
+    <execute_each_row>N</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1278</xloc>
+      <yloc>305</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>FreeFrame Grenzpunkt</name>
     <type>FreeFrame</type>
     <description/>
@@ -1690,258 +1942,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>1299</xloc>
       <yloc>706</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__grenzpunkt WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>41</xloc>
-      <yloc>271</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 2</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>189</xloc>
-      <yloc>269</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 3</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>352</xloc>
-      <yloc>273</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 4</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>492</xloc>
-      <yloc>278</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 5</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>642</xloc>
-      <yloc>289</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 6</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>786</xloc>
-      <yloc>279</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 7</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>952</xloc>
-      <yloc>286</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 8</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1111</xloc>
-      <yloc>301</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script 9</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>strelnikow</connection>
-    <execute_each_row>N</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1278</xloc>
-      <yloc>305</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
