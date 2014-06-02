@@ -160,8 +160,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1165</xloc>
-      <yloc>231</yloc>
+      <xloc>881</xloc>
+      <yloc>237</yloc>
       </entry>
     <entry>
       <name>Deliveries</name>
@@ -197,7 +197,6 @@
       <type>TRANS</type>
       <filename>${Internal.Job.Filename.Directory}&#47;trans_update_ownership.ktr</filename>
       <transname/>
-      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>Y</exec_per_row>
       <clear_rows>N</clear_rows>
@@ -217,7 +216,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>590</xloc>
+      <xloc>591</xloc>
       <yloc>241</yloc>
       </entry>
   </entries>

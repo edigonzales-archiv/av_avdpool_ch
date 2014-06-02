@@ -166,7 +166,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Delete Ownership</from><to>Get rows from result 2</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 1</from><to>Delete Ownership</to><enabled>Y</enabled> </hop>  <hop> <from>Grenzpunkt</from><to>FreeFrame Plugin</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Grenzpunkt LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Liegenschaft</from><to>FreeFrame Plugin 2</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 2</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>Liegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>LiegenschaftPos</from><to>FreeFrame Plugin 3</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 3</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>LiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaft</from><to>FreeFrame Plugin 4</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 4</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>ProjLiegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaftPos</from><to>FreeFrame Plugin 5</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 5</from><to>Set SRS 5</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 5</from><to>ProjLiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Bergwerk</from><to>FreeFrame Plugin 6</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 6</from><to>Set SRS 6</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 6</from><to>SelbstRecht Berwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Berwerk Pos</from><to>FreeFrame Plugin 7</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 7</from><to>Set SRS 7</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 7</from><to>SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk</from><to>FreeFrame Plugin 8</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 8</from><to>Set SRS 8</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 8</from><to>Proj SelbstRecht Bergwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk Pos</from><to>FreeFrame Plugin 9</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Plugin 9</from><to>Set SRS 9</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 9</from><to>Proj SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Grenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>LiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>ProjLiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>SelbstRecht Berwerk Pos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Proj SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Proj SelbstRecht Bergwerk Pos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>ProjLiegenschaft</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Delete Ownership</from><to>Get rows from result 2</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 1</from><to>Delete Ownership</to><enabled>Y</enabled> </hop>  <hop> <from>Grenzpunkt</from><to>FreeFrame Grenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Grenzpunkt</from><to>Set SRS</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS</from><to>Grenzpunkt LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Liegenschaft</from><to>FreeFrame Liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame Liegenschaft</from><to>Set SRS 2</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 2</from><to>Liegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>LiegenschaftPos</from><to>FreeFrame LiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame LiegenschaftPos</from><to>Set SRS 3</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 3</from><to>LiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaft</from><to>FreeFrame ProjLiegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjLiegenschaft</from><to>Set SRS 4</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 4</from><to>ProjLiegenschaft LV95</to><enabled>Y</enabled> </hop>  <hop> <from>ProjLiegenschaftPos</from><to>FreeFrame ProjLiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjLiegenschaftPos</from><to>Set SRS 5</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 5</from><to>ProjLiegenschaftPos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Bergwerk</from><to>FreeFrame SelbstRecht_Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame SelbstRecht_Bergwerk</from><to>Set SRS 6</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 6</from><to>SelbstRecht Berwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>SelbstRecht Berwerk Pos</from><to>FreeFrame SelbstRecht_BergwerkPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame SelbstRecht_BergwerkPos</from><to>Set SRS 7</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 7</from><to>SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk</from><to>FreeFrame ProjSelbstRecht_Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjSelbstRecht_Bergwerk</from><to>Set SRS 8</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 8</from><to>Proj SelbstRecht Bergwerk LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Proj SelbstRecht Bergwerk Pos</from><to>FreeFrame ProjSelbstRecht_BergwerkPos</to><enabled>Y</enabled> </hop>  <hop> <from>FreeFrame ProjSelbstRecht_BergwerkPos</from><to>Set SRS 9</to><enabled>Y</enabled> </hop>  <hop> <from>Set SRS 9</from><to>Proj SelbstRecht Bergwerk Pos LV95</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Grenzpunkt</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>LiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>ProjLiegenschaftPos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>SelbstRecht Berwerk Pos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Proj SelbstRecht Bergwerk</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>Proj SelbstRecht Bergwerk Pos</to><enabled>Y</enabled> </hop>  <hop> <from>Get rows from result 2</from><to>ProjLiegenschaft</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Delete Ownership</name>
     <type>ExecSQL</type>
@@ -214,7 +214,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin</name>
+    <name>FreeFrame Grenzpunkt</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -236,7 +236,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin 2</name>
+    <name>FreeFrame Liegenschaft</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -258,7 +258,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin 3</name>
+    <name>FreeFrame LiegenschaftPos</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -280,7 +280,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin 4</name>
+    <name>FreeFrame ProjLiegenschaft</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -302,7 +302,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin 5</name>
+    <name>FreeFrame ProjLiegenschaftPos</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -324,7 +324,7 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
     </step>
 
   <step>
-    <name>FreeFrame Plugin 6</name>
+    <name>FreeFrame SelbstRecht_Bergwerk</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -339,14 +339,14 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
 		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>794</xloc>
-      <yloc>582</yloc>
+      <xloc>796</xloc>
+      <yloc>615</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>FreeFrame Plugin 7</name>
+    <name>FreeFrame SelbstRecht_BergwerkPos</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -361,14 +361,14 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
 		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>959</xloc>
-      <yloc>579</yloc>
+      <xloc>962</xloc>
+      <yloc>595</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>FreeFrame Plugin 8</name>
+    <name>FreeFrame ProjSelbstRecht_Bergwerk</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
@@ -383,14 +383,14 @@ DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
 		<triangular_transformation_network>CHENyx06</triangular_transformation_network>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1133</xloc>
-      <yloc>588</yloc>
+      <xloc>1139</xloc>
+      <yloc>613</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>FreeFrame Plugin 9</name>
+    <name>FreeFrame ProjSelbstRecht_BergwerkPos</name>
     <type>FreeFrame</type>
     <description/>
     <distribute>Y</distribute>
