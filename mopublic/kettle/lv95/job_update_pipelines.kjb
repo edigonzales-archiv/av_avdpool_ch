@@ -169,11 +169,12 @@
       <type>TRANS</type>
       <filename>${Internal.Job.Filename.Directory}&#47;trans_get_deliveries.ktr</filename>
       <transname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <logfile/>
       <logext/>
       <add_date>N</add_date>
@@ -216,7 +217,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>482</xloc>
+      <xloc>483</xloc>
       <yloc>188</yloc>
       </entry>
   </entries>
