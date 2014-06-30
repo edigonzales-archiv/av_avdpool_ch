@@ -38,7 +38,7 @@ public class App
     @SuppressWarnings("unchecked")
     public static void main( String[] args )
     {
-    	logger.setLevel(Level.INFO);
+    	logger.setLevel(Level.DEBUG);
 
     	try {
 	    	// read log4j properties file
@@ -65,10 +65,10 @@ public class App
 			
 			String srcDir = (String) params.get("srcdir");			
 			Path dir = Paths.get(srcDir);
+			logger.debug(dir);
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, "*.itf")) {
-			    for (Path entry : stream) {
-                    
+			    for (Path entry : stream) {                    
                     // Es werden nur itf Dateien importiert, die heute geändert/geliefert wurden.
                     BasicFileAttributes attrs = Files.readAttributes(entry, BasicFileAttributes.class);
                     long millis = attrs.lastModifiedTime().toMillis();
@@ -100,7 +100,8 @@ public class App
 
                     String prefix = Integer.toString(bfsnr) + Integer.toString(los);
                     logger.debug(prefix);
-
+                    logger.debug(entry.toAbsolutePath());
+                    
                     try {
                         IliReader iliReader = new IliReader(entry.toAbsolutePath().toString(), "21781", params);
                         iliReader.setTidPrefix(prefix);
@@ -131,13 +132,13 @@ public class App
 			// reindex tables
             logger.info("Start Reindexing...");
             Reindex reindex = new Reindex(params);
-            reindex.run();
+//            reindex.run();
             logger.info("End Reindexing.");
 			
 			// vacuum tables
             logger.info("Start Vacuum...");
             Vacuum vacuum = new Vacuum(params);
-            vacuum.run();
+//            vacuum.run();
             logger.info("End Vacuum.");
 			
 			logger.info("Should not reach here in case of errors..");

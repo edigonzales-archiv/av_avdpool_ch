@@ -1,752 +1,116 @@
-2014-06-01 18:17:34 org.catais.avdpool.App [INFO] Start: Sun Jun 01 18:17:34 CEST 2014
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbhost: localhost
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbport: 5432
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbname: xanadu2
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbschema: av_avdpool_ch
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbuser: mspublic
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbpwd: mspublic
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbadmin: stefan
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
-2014-06-01 18:17:34 org.catais.avdpool.utils.ReadProperties [DEBUG] all: true
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbhost: localhost
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbport: 5432
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbport: xanadu2
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbschema: av_avdpool_ch
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbuser: mspublic
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbpwd: mspublic
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbadmin: stefan
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] dbadminpwd: ziegler12
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] Interlis model name: DM01AVCH24D
-2014-06-01 18:17:34 org.catais.avdpool.interlis.IliReader [DEBUG] interlis model compiled
-2014-06-01 18:17:35 hsqldb.db.HSQLDB465838CA7D.ENGINE [INFO] dataFileCache open start
-2014-06-01 18:17:35 hsqldb.db.HSQLDB465838CA7D.ENGINE [INFO] Checkpoint start
-2014-06-01 18:17:35 hsqldb.db.HSQLDB465838CA7D.ENGINE [INFO] Checkpoint end
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1 (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1pos (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_lfp1symbol (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1 (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie1_hfp1pos (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2 (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2pos (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_lfp2symbol (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2 (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie2_hfp2pos (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2524, 0)
-2014-06-01 18:17:36 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3 (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3pos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_lfp3symbol (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3 (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from fixpunktekategorie3_hfp3pos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_bbnachfuehrung (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projboflaeche (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projgebaeudenummer (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projgebaeudenummerpos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projobjektname (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projobjektnamepos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_projboflaechesymbol (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_boflaeche (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_gebaeudenummer (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_gebaeudenummerpos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_objektname (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_objektnamepos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_boflaechesymbol (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_einzelpunkt (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bodenbedeckung_einzelpunktpos (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_eonachfuehrung (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelobjekt (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_flaechenelement (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_flaechenelementsymbol (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_linienelement (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_linienelementsymbol (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_punktelement (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektname (2524, 0)
-2014-06-01 18:17:37 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnamepos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnummer (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_objektnummerpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelpunkt (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from einzelobjekte_einzelpunktpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from hoehen_honachfuehrung (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from hoehen_hoehenpunkt (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from hoehen_hoehenpunktpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from hoehen_gelaendekante (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from hoehen_aussparung (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_nknachfuehrung (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_flurname (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_flurnamepos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_ortsname (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_ortsnamepos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_gelaendename (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nomenklatur_gelaendenamepos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lsnachfuehrung (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunkt (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunktpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grenzpunktsymbol (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projgrundstueck (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projgrundstueckpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib1 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projliegenschaft (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib2 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projselbstrecht (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib3 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_projbergwerk (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grundstueck (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_grundstueckpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib4 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_liegenschaft (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib5 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_selbstrecht (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_lineattrib6 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from liegenschaften_bergwerk (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_rlnachfuehrung (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_leitungsobjekt (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_leitungsobjektpos (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_lineattrib7 (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_flaechenelement (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_linienelement (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_punktelement (2524, 0)
-2014-06-01 18:17:38 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_signalpunkt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_signalpunktpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_einzelpunkt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rohrleitungen_einzelpunktpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nummerierungsbereich (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nbgeometrie (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemnachfuehrung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemeinde (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_projgemeindegrenze (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_lineattrib8 (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gemeindegrenzen_gemeindegrenze (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from landesgrenzen_landesgrenzabschnitt (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_plan (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_plangeometrie (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planeinteilungen_planpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from tseinteilung_toleranzstufe (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from tseinteilung_toleranzstufepos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rutschgebiete_rutschung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from rutschgebiete_rutschungpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_osnachfuehrung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsverbund (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsverbundtext (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaft (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_ortschaftsname (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_plz6nachfuehrung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from plzortschaft_plz6 (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebnachfuehrung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisation (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisationsname (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_lokalisationsnamepos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_benanntesgebiet (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_strassenstueck (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudeeingang (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_hausnummerpos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudename (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudenamepos (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_planlayout (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_planbeschriftung (2524, 0)
-2014-06-01 18:17:39 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_planbeschriftungpos (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenanschrift (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenanschriftpos (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_linienobjekt (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_koordinatenlinie (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_darstellungsflaeche (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_planlayoutsymbol (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Deleting data from planrahmen_netzkreuz (2524, 0)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] Starting Transaction...
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie1(oid itf0)...
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie2(oid itf1)...
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: null
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: null
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [WARN] no features in surfaceMainCollection
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2 | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.FixpunkteKategorie3(oid itf2)...
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung | Grösse: 2
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3 | Grösse: 32
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos | Grösse: 32
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Bodenbedeckung(oid itf3)...
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol | Grösse: 32
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung | Grösse: 24
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche_ Geometrie | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceHelper = true
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] build surface
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer | Grösse: 1
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie | Grösse: 1812
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.BoFlaeche_Geometrie
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaeche | Grösse: 189
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2014-06-01 18:17:40 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:41 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:41 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer | Grösse: 36
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.Objektname | Grösse: 6
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.ObjektnamePos | Grösse: 6
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Einzelobjekte(oid itf4)...
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol | Grösse: 12
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.EONachfuehrung | Grösse: 12
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Einzelobjekt | Grösse: 70
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Flaechenelement_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Flaechenelement | Grösse: 70
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Flaechenelement_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Flaechenelement_ Geometrie | Grösse: 70
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.Flaechenelement_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceHelper = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] build surface
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Linienelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol | Grösse: 3
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Linienelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Linienelement | Grösse: 11
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.Linienelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Linienelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.Objektname | Grösse: 4
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Objektname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Hoehen(oid itf5)...
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Nomenklatur(oid itf6)...
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Einzelobjekte.ObjektnamePos | Grösse: 4
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Flurname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.NKNachfuehrung | Grösse: 3
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Flurname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Flurname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Flurname_Geometrie | Grösse: 419
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.Flurname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.FlurnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Flurname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Flurname | Grösse: 15
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.Flurname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:41 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:41 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.FlurnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.FlurnamePos | Grösse: 15
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.FlurnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.FlurnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.Ortsname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Ortsname | Grösse: 1
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.Ortsname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.Ortsname_ Geometrie | Grösse: 1
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.Ortsname_Geometrie
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceHelper = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] build surface
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Liegenschaften(oid itf7)...
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nomenklatur.OrtsnamePos | Grösse: 1
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.LSNachfuehrung | Grösse: 15
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Grenzpunkt | Grösse: 604
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2014-06-01 18:17:41 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol | Grösse: 604
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjGrundstueck | Grösse: 20
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos | Grösse: 20
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjLiegenschaft | Grösse: 20
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Grundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_ Geometrie | Grösse: 20
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.ProjLiegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceHelper = true
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] build surface
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Grundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Grundstueck | Grösse: 96
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.Grundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.Grundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.GrundstueckPos | Grösse: 96
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Liegenschaften.Liegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie | Grösse: 849
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.Liegenschaft_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Rohrleitungen(oid itf8)...
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Liegenschaften.Liegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Liegenschaften.Liegenschaft | Grösse: 96
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Liegenschaften.Liegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:42 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:42 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.RLNachfuehrung | Grösse: 1
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.Leitungsobjekt | Grösse: 1
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Rohrleitungen.Linienelement
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos | Grösse: 1
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Nummerierungsbereiche(oid itf9)...
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Rohrleitungen.Linienelement
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Rohrleitungen.Linienelement | Grösse: 2
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Rohrleitungen.Linienelement
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Rohrleitungen.Linienelement
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich | Grösse: 6
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_Geometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie | Grösse: 6
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Gemeindegrenzen(oid itf10)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_ Geometrie | Grösse: 6
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceHelper = true
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] build surface
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung | Grösse: 2
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt | Grösse: 181
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos | Grösse: 7
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol | Grösse: 181
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeinde | Grösse: 1
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie | Grösse: 1
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Bezirksgrenzen(oid itf11)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Kantonsgrenzen(oid itf12)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Landesgrenzen(oid itf13)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Planeinteilungen(oid itf14)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plan
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze | Grösse: 1
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plan
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plan | Grösse: 4
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Planeinteilungen.Plan
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.Plan
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie | Grösse: 290
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Planeinteilungen.Plangeometrie_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Planeinteilungen.PlanPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.Plangeometrie | Grösse: 4
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.TSEinteilung(oid itf15)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Planeinteilungen.PlanPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Planeinteilungen.PlanPos | Grösse: 4
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Planeinteilungen.PlanPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Planeinteilungen.PlanPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie | Grösse: 248
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.TSEinteilung.Toleranzstufe_Geometrie
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Rutschgebiete(oid itf16)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.PLZOrtschaft(oid itf17)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Gebaeudeadressen(oid itf18)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.TSEinteilung.Toleranzstufe | Grösse: 2
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] build area
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2014-06-01 18:17:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] done
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung | Grösse: 8
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] isSurfaceMain = true
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] surfaceMainFeatureName: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Lokalisation | Grösse: 6
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (letzte Surface Tabelle ohne Geometrie): DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.LokalisationsName | Grösse: 6
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos | Grösse: 7
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Strassenstueck | Grösse: 57
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] neu: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] alt: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] ich schreibe... fc: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang | Grösse: 59
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] DM01AVCH24D.Planrahmen(oid itf19)...
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis (Geknorze.....)
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] featureName:: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] writeToPostgis: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2014-06-01 18:17:43 org.catais.avdpool.interlis.IliReader [DEBUG] Committing Transaction...
-2014-06-01 18:17:43 org.catais.avdpool.App [INFO] Start Reindexing...
-2014-06-01 18:17:43 org.catais.avdpool.utils.Reindex [INFO] Reindexing tables from: av_avdpool_ch
-2014-06-01 18:19:52 org.catais.avdpool.utils.Reindex [INFO] Reindexing finished.
-2014-06-01 18:19:52 org.catais.avdpool.App [INFO] End Reindexing.
-2014-06-01 18:19:52 org.catais.avdpool.App [INFO] Start Vacuum...
-2014-06-01 18:19:52 org.catais.avdpool.utils.Vacuum [INFO] Vacuumizing tables from: av_avdpool_ch
-2014-06-01 18:20:13 org.catais.avdpool.utils.Vacuum [INFO] Vacuumizing finished.
-2014-06-01 18:20:13 org.catais.avdpool.App [INFO] End Vacuum.
-2014-06-01 18:20:13 org.catais.avdpool.App [INFO] Should not reach here in case of errors..
-2014-06-01 18:20:13 org.catais.avdpool.App [INFO] Ende: Sun Jun 01 18:20:13 CEST 2014
+2014-06-30 19:12:45 org.catais.avdpool.App [INFO] Start: Mon Jun 30 19:12:45 CEST 2014
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbhost: localhost
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbport: 5432
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbname: xanadu2
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbschema: av_avdpool_ch
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbuser: mspublic
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbpwd: mspublic
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbadmin: stefan
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] dbadminpwd: ziegler12
+2014-06-30 19:12:45 org.catais.avdpool.utils.ReadProperties [DEBUG] all: true
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] {dbschema=av_avdpool_ch, dbadmin=stefan, dbhost=localhost, dbport=5432, dbname=xanadu2, dbpwd=mspublic, srcdir=/opt/Geodaten/ch/so/kva/av/dm01avch24d/itf/lv03/, dbadminpwd=ziegler12, dbuser=mspublic, all=true}
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] /opt/Geodaten/ch/so/kva/av/dm01avch24d/itf/lv03/
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] true
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] /opt/Geodaten/ch/so/kva/av/dm01avch24d/itf/lv03
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] 24930
+2014-06-30 19:12:45 org.catais.avdpool.App [DEBUG] /opt/Geodaten/ch/so/kva/av/dm01avch24d/itf/lv03/ch_249300.itf
+2014-06-30 19:12:47 hsqldb.db.HSQLDB46EDC3C100.ENGINE [INFO] dataFileCache open start
+2014-06-30 19:12:47 hsqldb.db.HSQLDB46EDC3C100.ENGINE [INFO] Checkpoint start
+2014-06-30 19:12:47 hsqldb.db.HSQLDB46EDC3C100.ENGINE [INFO] Checkpoint end
+2014-06-30 19:13:07 org.catais.avdpool.interlis.IliReader [WARN] no features in surfaceMainCollection
+2014-06-30 19:13:07 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2014-06-30 19:13:09 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2014-06-30 19:13:09 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2014-06-30 19:13:09 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2014-06-30 19:13:09 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2014-06-30 19:13:10 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2014-06-30 19:13:12 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2014-06-30 19:13:12 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2014-06-30 19:13:14 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2014-06-30 19:13:15 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2014-06-30 19:13:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2014-06-30 19:13:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
+2014-06-30 19:13:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
+2014-06-30 19:13:26 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:13:26 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 1
+2014-06-30 19:13:26 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2014-06-30 19:13:32 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2014-06-30 19:13:33 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
+2014-06-30 19:13:33 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2014-06-30 19:13:33 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2014-06-30 19:13:33 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
+2014-06-30 19:13:34 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2014-06-30 19:13:35 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2014-06-30 19:13:35 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2014-06-30 19:13:36 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2014-06-30 19:13:37 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
+2014-06-30 19:13:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Objektname
+2014-06-30 19:13:42 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2014-06-30 19:13:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Objektnummer
+2014-06-30 19:13:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2014-06-30 19:13:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:13:43 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2014-06-30 19:13:43 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
+2014-06-30 19:13:44 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
+2014-06-30 19:13:44 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Gelaendename
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.GelaendenamePos
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2014-06-30 19:13:45 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2014-06-30 19:13:51 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2014-06-30 19:13:51 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2014-06-30 19:14:00 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2014-06-30 19:14:01 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2014-06-30 19:14:01 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2014-06-30 19:14:01 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2014-06-30 19:14:02 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
+2014-06-30 19:14:03 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2014-06-30 19:14:06 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:14:06 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2014-06-30 19:14:06 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
+2014-06-30 19:14:15 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2014-06-30 19:14:15 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.SelbstRecht
+2014-06-30 19:14:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.SelbstRecht
+2014-06-30 19:14:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2014-06-30 19:14:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2014-06-30 19:14:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2014-06-30 19:14:16 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2014-06-30 19:14:17 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2014-06-30 19:14:18 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2014-06-30 19:14:18 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2014-06-30 19:14:18 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2014-06-30 19:14:19 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2014-06-30 19:14:19 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:14:19 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2014-06-30 19:14:19 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2014-06-30 19:14:19 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt
+2014-06-30 19:14:19 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Kantonsgrenzen.Kantonsgrenzabschnitt
+2014-06-30 19:14:19 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
+2014-06-30 19:14:20 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:14:20 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2014-06-30 19:14:20 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2014-06-30 19:14:21 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
+2014-06-30 19:14:21 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2014-06-30 19:14:21 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2014-06-30 19:14:21 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2014-06-30 19:14:21 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.ToleranzstufePos
+2014-06-30 19:14:22 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2014-06-30 19:14:22 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2014-06-30 19:14:22 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2014-06-30 19:14:22 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2014-06-30 19:14:23 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2014-06-30 19:14:23 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2014-06-30 19:14:23 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.BenanntesGebiet
+2014-06-30 19:14:23 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2014-06-30 19:14:25 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2014-06-30 19:14:27 org.catais.avdpool.interlis.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2014-06-30 19:14:29 org.catais.avdpool.App [DEBUG] 25420
+2014-06-30 19:14:29 org.catais.avdpool.App [DEBUG] /opt/Geodaten/ch/so/kva/av/dm01avch24d/itf/lv03/ch_254200.itf
