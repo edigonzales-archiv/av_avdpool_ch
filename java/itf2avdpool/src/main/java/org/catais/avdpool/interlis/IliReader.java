@@ -127,13 +127,33 @@ public class IliReader {
         
     }
     
+    public void startTransaction() {
+    	logger.debug( "Starting Transaction..." );
+    	t = new DefaultTransaction();
+    }
+
+    public void commitTransaction() {
+    	logger.debug("Committing Transaction...");
+    	try {
+    		try {
+    			t.commit();
+    			//logger.debug("Haha rollback...");
+    			//t.rollback();
+    		} catch (IOException ioe) {
+    			logger.error("Cannot commit transaction");
+    			logger.error(ioe.getMessage());
+    			t.rollback();
+    		} finally {
+    			t.close();
+    		}
+    	} catch (IOException ioe) {
+    		logger.error(ioe.getMessage());
+    	}
+    }
         
     public void read( int gem_bfs, int los ) throws IoxException, IOException 
     {    	    	
-    	logger.debug( "Starting Transaction..." );
-    	t = new DefaultTransaction();
-    	
-    	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
+       	ioxReader = new ch.interlis.iom_j.itf.ItfReader( new java.io.File( this.itfFileName ) );
     	((ItfReader) ioxReader).setModel( iliTd );
     	((ItfReader) ioxReader).setRenumberTids( true );
     	((ItfReader) ioxReader).setReadEnumValAsItfCode( true );
@@ -181,30 +201,6 @@ public class IliReader {
     			ex.printStackTrace();
     		}
     	}                                               
-
-    	logger.debug("Committing Transaction...");
-    	try 
-    	{
-        	try 
-        	{
-        		t.commit();
-        	} 
-        	catch ( IOException ex ) 
-        	{
-        		logger.error( "Cannot commit transaction." );
-        		logger.error( ex.getMessage() );
-        		ex.printStackTrace();
-        		
-        		t.rollback();
-        	} 
-        	finally 
-        	{
-        		t.close();
-        	}
-    	} catch ( IOException ex ) 
-    	{
-    		logger.error( ex.getMessage() );
-    	}
     }
     
     
@@ -503,7 +499,8 @@ public class IliReader {
     				FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource( tableName );
     				FeatureStore<SimpleFeatureType, SimpleFeature> store = (FeatureStore<SimpleFeatureType, SimpleFeature>) source;
 
-
+    				store.setTransaction(t);
+    				
     				FilterFactory ff = CommonFactoryFinder.getFilterFactory( null );
     				Filter filter = null;
 

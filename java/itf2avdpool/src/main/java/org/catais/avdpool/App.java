@@ -105,9 +105,10 @@ public class App
                     try {
                         IliReader iliReader = new IliReader(entry.toAbsolutePath().toString(), "21781", params);
                         iliReader.setTidPrefix(prefix);
-      
+                        iliReader.startTransaction();
                         iliReader.delete(bfsnr, los);
                         iliReader.read(bfsnr, los);  
+                        iliReader.commitTransaction();
                     } catch (Ili2cException e) {
                         logger.fatal(e.getMessage());
                     } catch (IllegalArgumentException e) {
@@ -115,17 +116,22 @@ public class App
                     } 
 			    } 
 			} catch (IOException e) {
+				e.printStackTrace();
 			    logger.fatal(e.getMessage());
                 throw new IOException(e.getMessage());
 			} catch (NumberFormatException e) {
+				e.printStackTrace();
 	            logger.fatal(e.getMessage());
 			    throw new NumberFormatException(e.getMessage());
 			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
                 logger.fatal(e.getMessage());
                 throw new Exception(e.getMessage());
             } catch (SQLException e) {
+            	e.printStackTrace();
                 logger.fatal(e.getMessage());
             } catch (Exception e) {
+            	e.printStackTrace();
                 logger.fatal(e.getMessage());
             }                 
 
