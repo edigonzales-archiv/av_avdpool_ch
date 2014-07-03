@@ -58,8 +58,8 @@
 * Kann ein Linienelement einen EGID haben?</note>
       <xloc>69</xloc>
       <yloc>396</yloc>
-      <width>402</width>
-      <heigth>49</heigth>
+      <width>433</width>
+      <heigth>58</heigth>
     </notepad>
   </notepads>
   <connection>
@@ -93,6 +93,28 @@
     <port>5432</port>
     <username>mspublic</username>
     <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>rosebud2_lv95</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>rosebud2_lv95</database>
+    <port>5432</port>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -213,7 +235,7 @@
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelement WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__flaechenelement (tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
+INSERT INTO av_mopublic.einzelobjekte__flaechenelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
 
 SELECT g.tid, g.gueltigkeit, g.typ, g.geometrie, g.qualitaetsstandard, h.gwr_egid, g.stand_am, g.bfsnr
 FROM
@@ -353,7 +375,7 @@ AND 1 = e.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__linienelement WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__linienelement (tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
+INSERT INTO av_mopublic.einzelobjekte__linienelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
 SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL::integer AS gwr_egid, to_date(b.stand_am, &apos;YYYYMMDD&apos;) as stand_am, b.gem_bfs AS bfsnr
 FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, 
 ( 
@@ -464,7 +486,7 @@ AND 1 = e.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__punktelement WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__punktelement (tid, gueltigkeit, art, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
+INSERT INTO av_mopublic.einzelobjekte__punktelement (tid, gueltigkeit, typ, geometrie, qualitaetsstandard, gwr_egid, stand_am, bfsnr)
 SELECT b.tid, e.designation_d AS gueltigkeit, c.designation_d AS typ, b.geometrie, d.designation_d AS qualitaetsstandard, NULL::integer AS gwr_egid, to_date(b.stand_am, &apos;YYYYMMDD&apos;) as stand_am, b.gem_bfs AS bfsnr
 FROM av_mopublic_meta.qualitystandard_type d, av_mopublic_meta.so_type c, 
 ( 
