@@ -138,13 +138,13 @@ public class App
 			// reindex tables
             logger.info("Start Reindexing...");
             Reindex reindex = new Reindex(params);
-//            reindex.run();
+            reindex.run();
             logger.info("End Reindexing.");
 			
 			// vacuum tables
             logger.info("Start Vacuum...");
             Vacuum vacuum = new Vacuum(params);
-//            vacuum.run();
+            vacuum.run();
             logger.info("End Vacuum.");
 			
 			logger.info("Should not reach here in case of errors..");
