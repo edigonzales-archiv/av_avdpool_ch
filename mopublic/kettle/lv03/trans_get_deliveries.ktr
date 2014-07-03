@@ -229,7 +229,7 @@ FROM av_avdpool_ch.gemeindegrenzen_gemeinde
 --WHERE gem_bfs = 2427
 WHERE lieferdatum = current_date
 --LIMIT 5
-LIMIT 1
+--LIMIT 1
  
 --SELECT DISTINCT fosnr as gem_bfs
 --FROM delivery
