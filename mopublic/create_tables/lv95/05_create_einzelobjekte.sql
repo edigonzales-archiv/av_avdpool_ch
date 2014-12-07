@@ -20,10 +20,10 @@ ALTER TABLE av_mopublic.einzelobjekte__flaechenelement OWNER TO stefan;
 GRANT ALL ON TABLE av_mopublic.einzelobjekte__flaechenelement TO stefan;
 GRANT SELECT ON TABLE av_mopublic.einzelobjekte__flaechenelement TO mspublic;
 
-CREATE INDEX idx_einzelobjekte__flaechenelement_art
+CREATE INDEX idx_einzelobjekte__flaechenelement_typ
   ON av_mopublic.einzelobjekte__flaechenelement
   USING btree
-  (art);
+  (typ);
 
 CREATE INDEX idx_einzelobjekte__flaechenelement_bfsnr
   ON av_mopublic.einzelobjekte__flaechenelement
@@ -128,10 +128,10 @@ ALTER TABLE av_mopublic.einzelobjekte__linienelement OWNER TO stefan;
 GRANT ALL ON TABLE av_mopublic.einzelobjekte__linienelement TO stefan;
 GRANT SELECT ON TABLE av_mopublic.einzelobjekte__linienelement TO mspublic;
 
-CREATE INDEX idx_einzelobjekte__linienelement_art
+CREATE INDEX idx_einzelobjekte__linienelement_typ
   ON av_mopublic.einzelobjekte__linienelement
   USING btree
-  (art);
+  (typ);
 
 CREATE INDEX idx_einzelobjekte__linienelement_bfsnr
   ON av_mopublic.einzelobjekte__linienelement
@@ -236,10 +236,10 @@ ALTER TABLE av_mopublic.einzelobjekte__punktelement OWNER TO stefan;
 GRANT ALL ON TABLE av_mopublic.einzelobjekte__punktelement TO stefan;
 GRANT SELECT ON TABLE av_mopublic.einzelobjekte__punktelement TO mspublic;
 
-CREATE INDEX idx_einzelobjekte__punktelement_art
+CREATE INDEX idx_einzelobjekte__punktelement_typ
   ON av_mopublic.einzelobjekte__punktelement
   USING btree
-  (art);
+  (typ);
 
 CREATE INDEX idx_einzelobjekte__punktelement_bfsnr
   ON av_mopublic.einzelobjekte__punktelement
