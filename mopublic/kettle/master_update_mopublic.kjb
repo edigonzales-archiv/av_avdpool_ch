@@ -104,7 +104,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>xanadu2</database>
+    <database>rosebud2</database>
     <port>5432</port>
     <username>stefan</username>
     <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
@@ -116,10 +116,8 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -436,7 +434,7 @@
       <to>LV95: Reindex MOpublic</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -445,7 +443,7 @@
       <to>LV95: Vacuum MOpublic</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -454,7 +452,7 @@
       <to>LV95: Update Metadata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -463,7 +461,7 @@
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -472,7 +470,7 @@
       <to>LV95: Update MOpublic</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -482,15 +480,15 @@
       <note>LV03</note>
       <xloc>932</xloc>
       <yloc>174</yloc>
-      <width>39</width>
-      <heigth>26</heigth>
+      <width>43</width>
+      <heigth>27</heigth>
     </notepad>
     <notepad>
       <note>LV95</note>
       <xloc>943</xloc>
       <yloc>395</yloc>
-      <width>39</width>
-      <heigth>26</heigth>
+      <width>43</width>
+      <heigth>27</heigth>
     </notepad>
   </notepads>
 </job>
